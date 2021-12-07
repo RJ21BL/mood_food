@@ -237,3 +237,554 @@ FOREIGN KEY ("blob_id")
   [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(976718932431307380)[0m
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/posts" for ::1 at 2021-12-07 10:25:10 +0000
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  
+Started GET "/" for ::1 at 2021-12-07 10:25:12 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/rebecca/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/rebecca/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.3ms | Allocations: 223)
+Completed 200 OK in 15ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 2512)
+
+
+Started GET "/" for ::1 at 2021-12-07 10:25:18 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/rebecca/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/rebecca/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.0ms | Allocations: 219)
+Completed 200 OK in 11ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 972)
+
+
+Started GET "/" for ::1 at 2021-12-07 10:25:21 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/rebecca/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/rebecca/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 46)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 411)
+
+
+Started GET "/new" for ::1 at 2021-12-07 10:25:55 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+Started GET "/index" for ::1 at 2021-12-07 10:25:59 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+Started GET "/" for ::1 at 2021-12-07 10:26:02 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/rebecca/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/rebecca/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 45)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 405)
+
+
+Started GET "/" for ::1 at 2021-12-07 10:26:51 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/rebecca/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/rebecca/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 45)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 405)
+
+
+Started GET "/" for ::1 at 2021-12-07 10:26:52 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/rebecca/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/rebecca/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 45)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 404)
+
+
+Started GET "/" for ::1 at 2021-12-07 10:26:54 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/rebecca/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/rebecca/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 45)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 404)
+
+
+Started GET "/" for ::1 at 2021-12-07 10:26:57 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/rebecca/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/rebecca/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 46)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 410)
+
+
+Started GET "/new" for ::1 at 2021-12-07 10:27:02 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+Started GET "/" for ::1 at 2021-12-07 10:27:18 +0000
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/rebecca/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/rebecca/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.6ms | Allocations: 415)
+Completed 200 OK in 40ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 3097)
+
+
+Started GET "/" for ::1 at 2021-12-07 10:27:21 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/rebecca/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/rebecca/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.7ms | Allocations: 219)
+Completed 200 OK in 13ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 973)
+
+
+Started GET "/food" for ::1 at 2021-12-07 10:28:23 +0000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered food/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 291)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+/Users/rebecca/.rvm/gems/ruby-3.0.0/gems/webpacker-5.4.3/lib/webpacker/runner.rb:13:in ``': No such file or directory - yarn (Errno::ENOENT)
+	from /Users/rebecca/.rvm/gems/ruby-3.0.0/gems/webpacker-5.4.3/lib/webpacker/runner.rb:13:in `initialize'
+	from /Users/rebecca/.rvm/gems/ruby-3.0.0/gems/webpacker-5.4.3/lib/webpacker/runner.rb:6:in `new'
+	from /Users/rebecca/.rvm/gems/ruby-3.0.0/gems/webpacker-5.4.3/lib/webpacker/runner.rb:6:in `run'
+	from ./bin/webpack:17:in `block in <main>'
+	from ./bin/webpack:16:in `chdir'
+	from ./bin/webpack:16:in `<main>'
+
+  Rendered layout layouts/application.html.erb (Duration: 657.4ms | Allocations: 15970)
+Completed 500 Internal Server Error in 714ms (ActiveRecord: 0.0ms | Allocations: 19091)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Users/rebecca/Projects/Makers/Week_10/mood_food/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/food" for ::1 at 2021-12-07 10:29:22 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered food/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+./bin/webpack:12:in `require': cannot load such file -- webpacker (LoadError)
+	from ./bin/webpack:12:in `<main>'
+
+  Rendered layout layouts/application.html.erb (Duration: 299.7ms | Allocations: 5281)
+Completed 500 Internal Server Error in 301ms (ActiveRecord: 0.0ms | Allocations: 5643)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Users/rebecca/Projects/Makers/Week_10/mood_food/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/food" for ::1 at 2021-12-07 10:29:24 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered food/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+./bin/webpack:12:in `require': cannot load such file -- webpacker (LoadError)
+	from ./bin/webpack:12:in `<main>'
+
+  Rendered layout layouts/application.html.erb (Duration: 281.0ms | Allocations: 5261)
+Completed 500 Internal Server Error in 282ms (ActiveRecord: 0.0ms | Allocations: 5621)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Users/rebecca/Projects/Makers/Week_10/mood_food/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/food" for ::1 at 2021-12-07 10:29:35 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered food/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+./bin/webpack:12:in `require': cannot load such file -- webpacker (LoadError)
+	from ./bin/webpack:12:in `<main>'
+
+  Rendered layout layouts/application.html.erb (Duration: 280.4ms | Allocations: 5259)
+Completed 500 Internal Server Error in 282ms (ActiveRecord: 0.0ms | Allocations: 5614)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Users/rebecca/Projects/Makers/Week_10/mood_food/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/food" for ::1 at 2021-12-07 10:30:46 +0000
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered food/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 291)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 8237)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms | Allocations: 11349)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<ActionView::Base:0x00000000007f08>
+Did you mean?  javascript_path
+               javascript_tag):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/food" for ::1 at 2021-12-07 10:30:50 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered food/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 5179)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms | Allocations: 5541)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<ActionView::Base:0x00000000008368>
+Did you mean?  javascript_path
+               javascript_tag):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/food" for ::1 at 2021-12-07 10:31:16 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered food/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 106)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 403)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 1691)
+
+
+Started GET "/food" for ::1 at 2021-12-07 10:31:22 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered food/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 180)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 661)
+
+
+Started GET "/food" for ::1 at 2021-12-07 10:32:14 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered food/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 106)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 7517)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 8779)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag    'application', media: 'all' %>
+    10:     <%= javascript_include_tag 'application' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/food" for ::1 at 2021-12-07 10:36:50 +0000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered food/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 291)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 10226)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms | Allocations: 13435)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag    'application', media: 'all' %>
+    10:     <%= javascript_include_tag 'application' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/food" for ::1 at 2021-12-07 10:36:52 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered food/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 7218)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 7632)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag    'application', media: 'all' %>
+    10:     <%= javascript_include_tag 'application' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/food" for ::1 at 2021-12-07 10:38:52 +0000
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered food/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 291)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 10225)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms | Allocations: 13433)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag    'application', media: 'all' %>
+    10:     <%= javascript_include_tag 'application' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/food" for ::1 at 2021-12-07 10:38:53 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered food/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 7218)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 7632)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag    'application', media: 'all' %>
+    10:     <%= javascript_include_tag 'application' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/food" for ::1 at 2021-12-07 10:39:30 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered food/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 7218)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 7630)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag    'application', media: 'all' %>
+    10:     <%= javascript_include_tag 'application' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/food" for ::1 at 2021-12-07 10:39:32 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered food/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 7216)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 7623)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag    'application', media: 'all' %>
+    10:     <%= javascript_include_tag 'application' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/food" for ::1 at 2021-12-07 10:39:52 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered food/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 106)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1692)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 3032)
+
+
+Started GET "/food" for ::1 at 2021-12-07 10:40:59 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered food/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 106)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1684)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 2991)
+
+
+Started GET "/food" for ::1 at 2021-12-07 10:41:13 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered food/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1410)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 1855)
+
+
+Started GET "/food" for ::1 at 2021-12-07 10:41:17 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered food/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 106)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 390)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 1687)
+
+
+Started GET "/food" for ::1 at 2021-12-07 10:41:35 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered food/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 106)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1662)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 2960)
+
+
+Started GET "/food" for ::1 at 2021-12-07 10:41:35 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered food/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 109)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1672)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 2977)
+
+
+Started GET "/food" for ::1 at 2021-12-07 10:41:36 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered food/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1407)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 1852)
+
+
+Started GET "/food" for ::1 at 2021-12-07 10:41:36 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered food/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1407)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 1851)
+
+
+Started GET "/food" for ::1 at 2021-12-07 10:41:37 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered food/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1407)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 1851)
+
+
+Started GET "/food" for ::1 at 2021-12-07 10:42:02 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered food/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1407)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 1852)
+
+
+Started GET "/food" for ::1 at 2021-12-07 10:42:04 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered food/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1407)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 1851)
+
+
+Started GET "/food" for ::1 at 2021-12-07 10:42:20 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered food/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 238)
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | Allocations: 15764)
+Completed 200 OK in 44ms (Views: 36.1ms | ActiveRecord: 0.0ms | Allocations: 19101)
+
+
