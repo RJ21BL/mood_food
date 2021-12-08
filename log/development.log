@@ -8046,3 +8046,1484 @@ Completed 200 OK in 10ms (Views: 8.7ms | Allocations: 3998)
 >>>>>>> main
 
 
+Started GET "/food" for ::1 at 2021-12-08 15:26:09 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 3 pending migrations:
+
+20211206164225_create_active_storage_tables.active_storage.rb
+20211208091909_create_food.rb
+20211208095050_table_array.rb
+
+
+):
+  
+activerecord (6.1.4.1) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4.1) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4.1) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4.1) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(976718932431307380)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActiveStorageTables (20211206164225)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.4ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(976718932431307380)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "mood_food_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE "mood_food_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(976718932431307380)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActiveStorageTables (20211206164225)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(976718932431307380)[0m
+  [1m[35m (14.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(976718932431307380)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActiveStorageTables (20211206164225)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" bigserial primary key, "blob_id" bigint NOT NULL, "variation_digest" character varying NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211206164225"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateFood (20211208091909)
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "foods" ("id" bigserial primary key, "name" character varying, "dietary_pref" character varying, "cooking_time" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211208091909"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to TableArray (20211208095050)
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "foods" ADD "cooking_instruction" character varying[] DEFAULT '{}'[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "foods" ADD "ingridents" character varying[] DEFAULT '{}'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "foods" ADD "allergies" character varying[] DEFAULT '{}'[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211208095050"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-12-08 15:28:54.242079"], ["updated_at", "2021-12-08 15:28:54.242079"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(976718932431307380)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/food" for ::1 at 2021-12-08 15:29:15 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.7ms | Allocations: 131)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 100)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:114
+  Rendered food/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1594)
+  Rendered layout layouts/application.html.erb (Duration: 47.1ms | Allocations: 14403)
+Completed 200 OK in 70ms (Views: 50.0ms | ActiveRecord: 1.9ms | Allocations: 20238)
+
+
+Started GET "/food" for ::1 at 2021-12-08 15:56:29 +0000
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.3ms | Allocations: 131)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 100)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:114
+  Rendered food/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1594)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 5624)
+Completed 200 OK in 37ms (Views: 19.0ms | ActiveRecord: 4.7ms | Allocations: 11002)
+
+
+Started GET "/food" for ::1 at 2021-12-08 15:56:33 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:114
+  Rendered food/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 625)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2243)
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.4ms | Allocations: 3306)
+
+
+Started GET "/food" for ::1 at 2021-12-08 15:56:40 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.3ms | Allocations: 123)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.4ms | Allocations: 99)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:114
+  Rendered food/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1370)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3180)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.5ms | Allocations: 5117)
+
+
+Started GET "/food" for ::1 at 2021-12-08 15:58:06 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 123)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:135
+  Rendered food/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1391)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3201)
+Completed 200 OK in 13ms (Views: 9.4ms | ActiveRecord: 0.5ms | Allocations: 5113)
+
+
+Started GET "/food" for ::1 at 2021-12-08 15:58:34 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:135
+  Rendered food/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 625)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2241)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.4ms | Allocations: 3292)
+
+
+Started GET "/food" for ::1 at 2021-12-08 16:00:07 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.3ms | Allocations: 123)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:114
+  Rendered food/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1369)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3177)
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 0.4ms | Allocations: 5072)
+
+
+Started GET "/food" for ::1 at 2021-12-08 16:11:13 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.6ms | Allocations: 123)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.5ms | Allocations: 132)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1712)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3532)
+Completed 200 OK in 28ms (Views: 11.8ms | ActiveRecord: 7.6ms | Allocations: 8652)
+
+
+Started GET "/la.jpg" for ::1 at 2021-12-08 16:11:13 +0000
+Started GET "/ny.jpg" for ::1 at 2021-12-08 16:11:13 +0000
+Started GET "/chicago.jpg" for ::1 at 2021-12-08 16:11:13 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/la.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/ny.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/chicago.jpg"):
+  
+Started GET "/food" for ::1 at 2021-12-08 16:13:28 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.4ms | Allocations: 123)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.5ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 161)
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1727)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 3548)
+Completed 200 OK in 18ms (Views: 13.2ms | ActiveRecord: 0.8ms | Allocations: 5463)
+
+
+Started GET "/ny.jpg" for ::1 at 2021-12-08 16:13:28 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/ny.jpg"):
+  
+Started GET "/food" for ::1 at 2021-12-08 16:15:47 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.3ms | Allocations: 131)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 100)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 162)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1959)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 5989)
+Completed 200 OK in 36ms (Views: 18.6ms | ActiveRecord: 2.6ms | Allocations: 11381)
+
+
+Started GET "/ny.jpg" for ::1 at 2021-12-08 16:15:47 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/ny.jpg"):
+  
+Started GET "/ny.jpg" for ::1 at 2021-12-08 16:15:48 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/ny.jpg"):
+  
+Started GET "/food" for ::1 at 2021-12-08 16:16:47 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.3ms | Allocations: 123)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 159)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1725)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3547)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.4ms | Allocations: 5474)
+
+
+Started GET "/food" for ::1 at 2021-12-08 16:17:46 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.3ms | Allocations: 123)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.4ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 1.6ms | Allocations: 233)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1800)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 3622)
+Completed 200 OK in 15ms (Views: 11.4ms | ActiveRecord: 0.4ms | Allocations: 5555)
+
+
+Started GET "/food" for ::1 at 2021-12-08 16:18:35 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.3ms | Allocations: 123)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.6ms | Allocations: 158)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1721)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3529)
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 0.4ms | Allocations: 5429)
+
+
+Started GET "/food" for ::1 at 2021-12-08 20:51:42 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.6ms | Allocations: 123)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 234)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1805)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 3626)
+Completed 200 OK in 37ms (Views: 15.0ms | ActiveRecord: 7.8ms | Allocations: 8772)
+
+
+Started GET "/food" for ::1 at 2021-12-08 20:52:13 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.3ms | Allocations: 123)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 216)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1779)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3587)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.4ms | Allocations: 5501)
+
+
+Started GET "/food" for ::1 at 2021-12-08 20:52:38 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.3ms | Allocations: 123)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 217)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1784)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3604)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.4ms | Allocations: 5507)
+
+
+Started GET "/food" for ::1 at 2021-12-08 20:56:23 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.3ms | Allocations: 123)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 217)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1786)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3606)
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.5ms | Allocations: 5517)
+
+
+Started GET "/food" for ::1 at 2021-12-08 20:56:35 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.4ms | Allocations: 123)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 217)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1782)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3597)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 0.5ms | Allocations: 5516)
+
+
+Started GET "/food" for ::1 at 2021-12-08 20:58:08 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.7ms | Allocations: 123)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 217)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1780)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3590)
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 0.4ms | Allocations: 5508)
+
+
+Started GET "/food" for ::1 at 2021-12-08 20:58:18 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.7ms | Allocations: 123)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 216)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1783)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3603)
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.4ms | Allocations: 5510)
+
+
+Started GET "/food" for ::1 at 2021-12-08 20:58:27 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.8ms | Allocations: 123)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.9ms | Allocations: 216)
+  [1m[36mFood Load (1.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1779)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 3587)
+Completed 200 OK in 24ms (Views: 16.1ms | ActiveRecord: 1.5ms | Allocations: 5477)
+
+
+Started GET "/food" for ::1 at 2021-12-08 20:59:00 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.4ms | Allocations: 123)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 217)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1786)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3606)
+Completed 200 OK in 14ms (Views: 9.2ms | ActiveRecord: 0.4ms | Allocations: 5511)
+
+
+Started GET "/food" for ::1 at 2021-12-08 20:59:16 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.7ms | Allocations: 123)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 216)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1779)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3587)
+Completed 200 OK in 15ms (Views: 10.4ms | ActiveRecord: 0.6ms | Allocations: 7853)
+
+
+Started GET "/food" for ::1 at 2021-12-08 20:59:25 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.3ms | Allocations: 123)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 216)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1783)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 3603)
+Completed 200 OK in 12ms (Views: 9.3ms | ActiveRecord: 0.4ms | Allocations: 5516)
+
+
+Started GET "/food" for ::1 at 2021-12-08 21:01:34 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.3ms | Allocations: 123)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 223)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1788)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3603)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.4ms | Allocations: 5514)
+
+
+Started GET "/food" for ::1 at 2021-12-08 21:03:40 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.4ms | Allocations: 123)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 224)
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1791)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3611)
+Completed 200 OK in 14ms (Views: 10.2ms | ActiveRecord: 0.5ms | Allocations: 5526)
+
+
+Started GET "/food" for ::1 at 2021-12-08 21:03:47 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 688)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2304)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.5ms | Allocations: 3352)
+
+
+Started GET "/food" for ::1 at 2021-12-08 21:04:15 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.3ms | Allocations: 123)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.4ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 223)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1794)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3614)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.4ms | Allocations: 5538)
+
+
+Started GET "/food" for ::1 at 2021-12-08 21:04:16 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 688)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2304)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.3ms | Allocations: 3361)
+
+
+Started GET "/food" for ::1 at 2021-12-08 21:04:16 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 688)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2304)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.4ms | Allocations: 3361)
+
+
+Started GET "/food" for ::1 at 2021-12-08 21:04:35 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.3ms | Allocations: 123)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 223)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1790)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3610)
+Completed 200 OK in 12ms (Views: 9.3ms | ActiveRecord: 0.4ms | Allocations: 5513)
+
+
+Started GET "/food" for ::1 at 2021-12-08 21:04:36 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 688)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2304)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.4ms | Allocations: 3355)
+
+
+Started GET "/food" for ::1 at 2021-12-08 21:06:11 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.4ms | Allocations: 123)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.4ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.6ms | Allocations: 223)
+  [1m[36mFood Load (11.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 18.1ms | Allocations: 1788)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 3603)
+Completed 200 OK in 28ms (Views: 14.7ms | ActiveRecord: 11.5ms | Allocations: 5505)
+
+
+Started GET "/food" for ::1 at 2021-12-08 21:07:13 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.3ms | Allocations: 123)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 224)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1787)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 3606)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.3ms | Allocations: 5504)
+
+
+Started GET "/food" for ::1 at 2021-12-08 21:08:05 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.4ms | Allocations: 123)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.5ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 223)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1792)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3612)
+Completed 200 OK in 14ms (Views: 9.3ms | ActiveRecord: 0.4ms | Allocations: 5517)
+
+
+Started GET "/food" for ::1 at 2021-12-08 21:08:06 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 688)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2304)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.3ms | Allocations: 3357)
+
+
+Started GET "/food" for ::1 at 2021-12-08 21:08:07 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 688)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2316)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.3ms | Allocations: 3369)
+
+
+Started GET "/food" for ::1 at 2021-12-08 21:08:08 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 688)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2304)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.3ms | Allocations: 3346)
+
+
+Started GET "/food" for ::1 at 2021-12-08 21:08:08 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 688)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2304)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.4ms | Allocations: 3345)
+
+
+Started GET "/food" for ::1 at 2021-12-08 21:08:11 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.1ms | Allocations: 5)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 688)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2304)
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 0.5ms | Allocations: 3358)
+
+
+Started GET "/food" for ::1 at 2021-12-08 21:08:14 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 688)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2316)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.5ms | Allocations: 3372)
+
+
+Started GET "/food" for ::1 at 2021-12-08 21:08:15 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 688)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2304)
+Completed 200 OK in 7ms (Views: 4.1ms | ActiveRecord: 0.3ms | Allocations: 3352)
+
+
+Started GET "/food" for ::1 at 2021-12-08 21:08:29 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.3ms | Allocations: 123)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 223)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1790)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3598)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.4ms | Allocations: 5499)
+
+
+Started GET "/food" for ::1 at 2021-12-08 21:08:32 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 688)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2311)
+Completed 200 OK in 7ms (Views: 4.1ms | ActiveRecord: 0.3ms | Allocations: 3363)
+
+
+Started GET "/food" for ::1 at 2021-12-08 21:09:21 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.3ms | Allocations: 123)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 223)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1788)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3607)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.4ms | Allocations: 5510)
+
+
+Started GET "/food" for ::1 at 2021-12-08 21:23:30 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 1.0ms | Allocations: 131)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 100)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.7ms | Allocations: 224)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2021)
+  Rendered layout layouts/application.html.erb (Duration: 47.1ms | Allocations: 18221)
+Completed 200 OK in 68ms (Views: 51.2ms | ActiveRecord: 2.7ms | Allocations: 23623)
+
+
+Started GET "/users/new" for ::1 at 2021-12-08 21:23:33 +0000
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 4.8ms | Allocations: 1644)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "users" does not exist
+LINE 8:  WHERE a.attrelid = '"users"'::regclass
+                            ^
+):
+  
+app/controllers/users_controller.rb:3:in `new'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(976718932431307380)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to UsersTable (20211208212442)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(976718932431307380)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "mood_food_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "mood_food_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(976718932431307380)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to UsersTable (20211208212442)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(976718932431307380)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(976718932431307380)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to UsersTable (20211208212442)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "user" ("id" bigserial primary key, "first_name" character varying, "surname" character varying, "email" character varying, "password_digest" character varying, "gender" character varying, "dob" date, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211208212442"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(976718932431307380)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/new" for ::1 at 2021-12-08 21:29:19 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 3.2ms | Allocations: 2925)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "users" does not exist
+LINE 8:  WHERE a.attrelid = '"users"'::regclass
+                            ^
+):
+  
+app/controllers/users_controller.rb:3:in `new'
+Started GET "/users/new" for ::1 at 2021-12-08 21:29:36 +0000
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 3.5ms | Allocations: 1131)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "users" does not exist
+LINE 8:  WHERE a.attrelid = '"users"'::regclass
+                            ^
+):
+  
+app/controllers/users_controller.rb:3:in `new'
+Started GET "/users/new" for ::1 at 2021-12-08 21:31:43 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+Started GET "/" for ::1 at 2021-12-08 21:32:19 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.6ms | Allocations: 125)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.6ms | Allocations: 100)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.8ms | Allocations: 224)
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1821)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 6179)
+Completed 200 OK in 29ms (Views: 21.5ms | ActiveRecord: 2.4ms | Allocations: 9753)
+
+
+Started GET "/users/new" for ::1 at 2021-12-08 21:32:22 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+Started GET "/users/new" for ::1 at 2021-12-08 21:32:29 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+Started GET "/users/new" for ::1 at 2021-12-08 21:33:18 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+Started GET "/users/new" for ::1 at 2021-12-08 21:33:19 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+Started GET "/users/new" for ::1 at 2021-12-08 21:34:02 +0000
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 3.8ms | Allocations: 2772)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "users" does not exist
+LINE 8:  WHERE a.attrelid = '"users"'::regclass
+                            ^
+):
+  
+app/controllers/users_controller.rb:3:in `new'
+Started GET "/users/new" for ::1 at 2021-12-08 21:34:50 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+Started GET "/users/new" for ::1 at 2021-12-08 21:35:55 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+Started GET "/users/new" for ::1 at 2021-12-08 21:36:01 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+Started GET "/users/new" for ::1 at 2021-12-08 21:37:02 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+Started GET "/users/new" for ::1 at 2021-12-08 21:37:03 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+Started GET "/users/new" for ::1 at 2021-12-08 21:37:03 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+Started GET "/users/new" for ::1 at 2021-12-08 21:37:03 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+Started GET "/users/new" for ::1 at 2021-12-08 21:37:06 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+Started GET "/" for ::1 at 2021-12-08 21:37:27 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.4ms | Allocations: 131)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.4ms | Allocations: 100)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.8ms | Allocations: 224)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 2021)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 6413)
+Completed 200 OK in 35ms (Views: 20.5ms | ActiveRecord: 2.5ms | Allocations: 11819)
+
+
+Started GET "/" for ::1 at 2021-12-08 21:37:29 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 688)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2362)
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 0.7ms | Allocations: 3427)
+
+
+Started GET "/users/" for ::1 at 2021-12-08 21:37:31 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/" for ::1 at 2021-12-08 21:37:51 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.4ms | Allocations: 131)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 100)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 224)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2021)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 6413)
+Completed 200 OK in 31ms (Views: 15.7ms | ActiveRecord: 2.7ms | Allocations: 11833)
+
+
+Started GET "/users/index" for ::1 at 2021-12-08 21:37:53 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/index"):
+  
+Started GET "/" for ::1 at 2021-12-08 21:38:14 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.3ms | Allocations: 131)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 100)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 224)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2021)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 6413)
+Completed 200 OK in 35ms (Views: 18.5ms | ActiveRecord: 2.9ms | Allocations: 11821)
+
+
+Started GET "/users/create" for ::1 at 2021-12-08 21:38:15 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/create"):
+  
+Started GET "/" for ::1 at 2021-12-08 21:38:25 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.6ms | Allocations: 124)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.4ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.5ms | Allocations: 222)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1786)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3652)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.4ms | Allocations: 5585)
+
+
+Started GET "/users/new" for ::1 at 2021-12-08 21:38:28 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+Started GET "/users/new" for ::1 at 2021-12-08 21:40:06 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+Started GET "/users/new" for ::1 at 2021-12-08 21:40:07 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+Started GET "/users/new" for ::1 at 2021-12-08 21:40:07 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+Started GET "/users/new" for ::1 at 2021-12-08 21:40:08 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+Started GET "/users/new" for ::1 at 2021-12-08 21:40:08 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+Started GET "/users/new" for ::1 at 2021-12-08 21:55:53 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+Started GET "/users/new" for ::1 at 2021-12-08 21:56:23 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+Started GET "/users/new" for ::1 at 2021-12-08 21:56:24 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+Started GET "/users/new" for ::1 at 2021-12-08 21:56:24 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+Started GET "/users/new" for ::1 at 2021-12-08 21:56:27 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+Started GET "/users/new" for ::1 at 2021-12-08 21:57:29 +0000
+  
+Zeitwerk::NameError (expected file /Users/rebecca/Projects/Makers/Week_10/mood_food/app/controllers/users_controller.rb to define constant UsersController, but didn't):
+  
+zeitwerk (2.5.1) lib/zeitwerk/loader/callbacks.rb:25:in `on_file_autoloaded'
+zeitwerk (2.5.1) lib/zeitwerk/kernel.rb:28:in `block in require'
+<internal:kernel>:90:in `tap'
+zeitwerk (2.5.1) lib/zeitwerk/kernel.rb:27:in `require'
+activesupport (6.1.4.1) lib/active_support/inflector/methods.rb:274:in `const_get'
+activesupport (6.1.4.1) lib/active_support/inflector/methods.rb:274:in `constantize'
+activesupport (6.1.4.1) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.1.4.1) lib/action_dispatch/http/request.rb:93:in `controller_class_for'
+actionpack (6.1.4.1) lib/action_dispatch/request/utils.rb:95:in `action_encoding_template'
+actionpack (6.1.4.1) lib/action_dispatch/request/utils.rb:83:in `encode'
+actionpack (6.1.4.1) lib/action_dispatch/request/utils.rb:45:in `set_binary_encoding'
+actionpack (6.1.4.1) lib/action_dispatch/http/parameters.rb:68:in `path_parameters='
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:48:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/users/new" for ::1 at 2021-12-08 21:58:07 +0000
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.8ms | Allocations: 2780)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "users" does not exist
+LINE 8:  WHERE a.attrelid = '"users"'::regclass
+                            ^
+):
+  
+app/controllers/users_controller.rb:3:in `new'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(976718932431307380)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(976718932431307380)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE DATABASE "mood_food_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "mood_food_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(976718932431307380)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to UsersTable (20211208220919)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211208220919"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(976718932431307380)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(976718932431307380)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(976718932431307380)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE DATABASE "mood_food_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE "mood_food_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(976718932431307380)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(976718932431307380)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(976718932431307380)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(976718932431307380)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(976718932431307380)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Users (20211208221148)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(976718932431307380)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(976718932431307380)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Users (20211208221148)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "surname" character varying, "email" character varying, "password_digest" character varying, "gender" character varying, "dob" date, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211208221148"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(976718932431307380)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/new" for ::1 at 2021-12-08 22:12:35 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 61.3ms | Allocations: 9322)
+  Rendered layout layouts/application.html.erb (Duration: 118.3ms | Allocations: 28269)
+Completed 200 OK in 143ms (Views: 122.5ms | ActiveRecord: 2.9ms | Allocations: 37055)
+
+
+Started GET "/users/new" for ::1 at 2021-12-08 22:12:54 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2924)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 4642)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 5192)
+
+
+Started POST "/users" for ::1 at 2021-12-08 22:13:27 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Rebecca", "surname"=>"Ransome", "email"=>"Beckyrose200@aol.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "gender"=>"female", "dob(3i)"=>"20", "dob(2i)"=>"10", "dob(1i)"=>"1997"}, "commit"=>"Sign Up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (2.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Beckyrose200@aol.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "surname", "email", "password_digest", "gender", "dob", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Rebecca"], ["surname", "Ransome"], ["email", "Beckyrose200@aol.com"], ["password_digest", "$2a$12$JIL7YvVXTiehauJcuJaP5O37MPvOwQtY9hAXGBTolvmPLNeKFj6Vq"], ["gender", "female"], ["dob", "1997-10-20"], ["created_at", "2021-12-08 22:13:27.281530"], ["updated_at", "2021-12-08 22:13:27.281530"]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Redirected to http://localhost:3000/food#index
+Completed 302 Found in 219ms (ActiveRecord: 3.9ms | Allocations: 4484)
+
+
+Started GET "/food" for ::1 at 2021-12-08 22:13:27 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 128)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.5ms | Allocations: 100)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.9ms | Allocations: 224)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1840)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3624)
+Completed 200 OK in 16ms (Views: 9.5ms | ActiveRecord: 2.2ms | Allocations: 6495)
+
+
+Started GET "/food" for ::1 at 2021-12-08 22:14:50 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.3ms | Allocations: 124)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.8ms | Allocations: 222)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1786)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 3714)
+Completed 200 OK in 24ms (Views: 20.8ms | ActiveRecord: 0.5ms | Allocations: 5643)
+
+
+Started GET "/login" for ::1 at 2021-12-08 22:14:53 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 677)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2443)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 3635)
+
+
+Started POST "/sessions" for ::1 at 2021-12-08 22:15:03 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"beckyrose200@aol.com", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "beckyrose200@aol.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 266)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1982)
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.2ms | Allocations: 3223)
+
+
+Started GET "/login_path" for ::1 at 2021-12-08 22:15:12 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/login_path"):
+  
+Started GET "/login_path" for ::1 at 2021-12-08 22:15:28 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/login_path"):
+  
+Started GET "/login_path" for ::1 at 2021-12-08 22:15:33 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/login_path"):
+  
+Started GET "/login_path" for ::1 at 2021-12-08 22:15:53 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/login_path"):
+  
+Started GET "/login_path" for ::1 at 2021-12-08 22:16:12 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/login_path"):
+  
+Started GET "/login_path" for ::1 at 2021-12-08 22:16:57 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/login_path"):
+  
+Started GET "/login_path" for ::1 at 2021-12-08 22:17:01 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/login_path"):
+  
+Started GET "/food" for ::1 at 2021-12-08 22:17:19 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 100)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 224)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1821)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 6547)
+Completed 200 OK in 32ms (Views: 19.6ms | ActiveRecord: 3.1ms | Allocations: 11131)
+
+
+Started GET "/users/new" for ::1 at 2021-12-08 22:17:21 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 16.2ms | Allocations: 6084)
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 7849)
+Completed 200 OK in 33ms (Views: 20.8ms | ActiveRecord: 2.9ms | Allocations: 14162)
+
+
+Started GET "/login" for ::1 at 2021-12-08 22:17:32 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 680)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2446)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 3612)
+
+
+Started GET "/users/new" for ::1 at 2021-12-08 22:17:36 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2924)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 4642)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 5196)
+
+
+Started GET "/login" for ::1 at 2021-12-08 22:18:52 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 277)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 1993)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 2508)
+
+
+Started POST "/sessions" for ::1 at 2021-12-08 22:19:08 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"Beckyrose200@aol.com", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Beckyrose200@aol.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/posts#index
+Completed 302 Found in 209ms (ActiveRecord: 0.3ms | Allocations: 1598)
+
+
+Started GET "/posts" for ::1 at 2021-12-08 22:19:08 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  
+Started POST "/sessions" for ::1 at 2021-12-08 22:19:38 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"Beckyrose200@aol.com", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Beckyrose200@aol.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/food#index
+Completed 302 Found in 209ms (ActiveRecord: 2.8ms | Allocations: 5686)
+
+
+Started GET "/food" for ::1 at 2021-12-08 22:19:38 +0000
+Processing by FoodController#index as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:12:in `p'
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/food/index.html.erb:110
+  Rendered food/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 694)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2494)
+Completed 200 OK in 10ms (Views: 5.0ms | ActiveRecord: 1.6ms | Allocations: 4608)
+
+
