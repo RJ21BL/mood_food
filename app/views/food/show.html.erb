@@ -18,12 +18,10 @@
         <p>Dietary preference: <%= food.dietary_pref %></p>
         <p>Ingredients: 
           <% food.ingredients.each_line do |t|%>
-          <tr>
-            <td><% t.each_line do |x| %></td>
-            <%=x%>
-            </tr>
+            <% t.each_line do |x| %>
+              <%=x%>
             <br>
-          <%end%>
+            <%end%>
           <%end%>
           </p>
         <br> 
