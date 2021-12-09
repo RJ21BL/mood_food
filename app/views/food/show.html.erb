@@ -15,19 +15,22 @@
   
     <div >
         <p>Dish: <%= food.name %></p> 
-        <p>dietary preference: <%= food.dietary_pref %></p>
-        <p>ingredients: </p>
-        <% food.ingredients.each_line do |t|%>
-          <% t.each_line do |x| %>
-          <%=x%>
-          <br>
-        <%end%>
-        <%end%>
+        <p>Dietary preference: <%= food.dietary_pref %></p>
+        <p>Ingredients: 
+          <% food.ingredients.each_line do |t|%>
+          <tr>
+            <td><% t.each_line do |x| %></td>
+            <%=x%>
+            </tr>
+            <br>
+          <%end%>
+          <%end%>
+          </p>
         <br> 
 
-        <p>cooking_time: <%= food.cooking_time %></p>
-        <p>allergies: <%= food.allergies.join %></p> 
-        <p>cooking_instruction: <% food.cooking_instructions%></p> 
+        <p>Cooking time: <%= food.cooking_time %></p>
+        <p>Allergies: <%= food.allergies.join %></p> 
+        <p>Cooking instructions: <% food.cooking_instructions%></p> 
         
     
     </div>

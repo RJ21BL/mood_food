@@ -1,24 +1,23 @@
 class FoodController < ApplicationController
-
-  def new 
+  def new
     @food = Food.new
   end
 
   def create 
     @food = Food.create(food_params)
-  end 
+  end
 
   def index 
     p @foods = Food.all
-  end 
+  end
+
   def show
     @foods = Food.all
-  end 
+  end
 
 private
 
   def food_params
     params.require(:food).permit(:name, :dietary_pref, :ingredients, :cooking_time, :allergies, :cooking_instructions)
   end
-
 end
