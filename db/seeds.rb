@@ -13,8 +13,8 @@ Food.create([{
 },
 {
   dietary_pref: 'Vegatarian',
-  ingredients: 'Samon, mixed vegetables, sweet potatoes, all purpose seasoning, salt, pepper and honey',
-  cooking_instructions: 'Descale samon, marinate with all purpose seasoning, thyme and honey and put in oven. Boil vegetables. Marinate sweet potatoes with salt and pepper, and put in oven.',
+  ingredients: 'Salmon, mixed vegetables, sweet potatoes, all purpose seasoning, salt, pepper and honey',
+  cooking_instructions: 'Descale salmon, marinate with all purpose seasoning, thyme and honey and put in oven. Boil vegetables. Marinate sweet potatoes with salt and pepper, and put in oven.',
   cooking_time: 60
 }])
 puts 'Seeding done.'
