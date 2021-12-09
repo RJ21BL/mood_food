@@ -49,8 +49,8 @@ ActiveRecord::Schema.define(version: 2021_12_09_092123) do
     t.text "cooking_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.text "cooking_instructions", default: "{}"
-    t.text "ingredients", default: "{}"
+    t.text "cooking_instructions", default: [], array: true
+    t.text "ingredients", default: [], array: true
     t.string "allergies", default: [], array: true
   end
 

@@ -1,8 +1,11 @@
 puts 'Seeding...'
+
+@ingredients = ['Lentils', 'Scotch bonnet', 'Plantain', 'rice and peas']
+
 Food.create([{
   name: 'Plant power',
   dietary_pref: 'Vegan', 
-  ingredients: 'Lentils scotch bonnet plantain and rice and peas', 
+  ingredients: @ingredients,
   cooking_instructions: 'Fry lentils with scotch bonnet and plantain, then boil rice and peas', 
   cooking_time: 30
 },
