@@ -18,7 +18,7 @@ class FoodController < ApplicationController
 private
 
   def food_params
-    params.require(:food).permit(:name, :dietary_pref, :ingridents, :cooking_time, :allergies, :cooking_instruction)
+    params.require(:food).permit(:name, :dietary_pref, :ingredients, :cooking_time, :allergies, :cooking_instructions)
   end
 
 end
