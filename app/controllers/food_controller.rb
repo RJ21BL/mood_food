@@ -13,8 +13,11 @@ class FoodController < ApplicationController
   end 
   def show
     @foods = Food.all
-    p rand_dom = rand(1...4)
+    p "+++"
+     rand_dom = rand(1...4)
+     p "+++"
     p @food = @foods[rand_dom]
+
   end 
 
 private
