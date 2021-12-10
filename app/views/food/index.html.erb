@@ -24,8 +24,7 @@
 <%= render "layouts/carousel_images" %>
 
 <center>
-<button type="button" class="btn btn-primary btn-lg" style="color: white; border: 2px solid white; background-color:#5c3971">Mood Food</button>
-
+<a href="food/show"><button type="button" class="btn btn-primary btn-lg" style="color: white; border: 2px solid white; background-color:#5c3971">Mood Food</button></a>
 <row>
   <br>
     <p></p>
@@ -34,7 +33,7 @@
 
 
 <div class="row" style="margin:15px">
-<div class="column">
+<div class="column" >
 <div class="card" style="width: 18rem; border: 4px solid #5c3971">
 <img src="/lasange.webp" class="card-img-top" alt="...">
 <div class="card-body">
@@ -110,14 +109,3 @@
 
 </html>
 
-<div>
-<% @foods.each do |food| %>
-
-  <h3> Dishes: 
-  <ul>
-     <li> <a href="food/show"> <%= food.name %></a> </li>
-  </ul>
-<% end %>
-</h3>
-
-</div>
