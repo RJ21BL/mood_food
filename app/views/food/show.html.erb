@@ -10,38 +10,44 @@
     
    </head>
   <body>
-
-  <% @foods.each do |food| %>
-  
     <div >
         <p>Dish: <%= food.name %></p> 
-        <p>dietary preference: <%= food.dietary_pref %></p> 
+        <p>Dietary preference: <%= food.dietary_pref %></p>
+        <p>Ingredients: 
+          <% food.ingredients.each_line do |t|%>
+            <% t.each_line do |x| %>
+              <%=x%>
+            <br>
+            <%end%>
+          <%end%>
+          </p>
+        <br> 
+
+        <p>Cooking time: <%= food.cooking_time %></p>
+        <p>Allergies: <%= food.allergies.join %></p> 
+        <p>Cooking instructions: <% food.cooking_instructions%></p> 
+
+    <div style="color: white;">
+        <p>Dish: <%= @food.name %></p> 
+        <p>dietary preference: <%= @food.dietary_pref %></p> 
         <p>ingridents: </p>
-        <% food.ingridents.each do |ing| %>
+        <% @food.ingridents.each do |ing| %>
           <p> <ul> <li> <%= ing %> </li> </ul></p>
           <% end %>
          
         <br> 
        
-        <p>cooking_time: <%= food.cooking_time %></p>
-        <p>allergies: <%= food.allergies.join %></p> 
-        <p>cooking_instruction: <% food.cooking_instruction.each do |instruction| %></p> 
+        <p>cooking_time: <%= @food.cooking_time %></p>
+        <p>allergies: <%= @food.allergies.join %></p> 
+        <p>cooking_instruction: <% @food.cooking_instruction.each do |instruction| %></p> 
           <p>  <ul>
            <li> <%= instruction %> </li>
           </ul> </p>
           <% end %>
+
         
     
     </div>
-
-  <% end %>
-
-     
-
-
-
-
-
    </body>
 </html>
 
