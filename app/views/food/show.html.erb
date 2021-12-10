@@ -10,9 +10,23 @@
     
    </head>
   <body>
+    <div >
+        <p>Dish: <%= food.name %></p> 
+        <p>Dietary preference: <%= food.dietary_pref %></p>
+        <p>Ingredients: 
+          <% food.ingredients.each_line do |t|%>
+            <% t.each_line do |x| %>
+              <%=x%>
+            <br>
+            <%end%>
+          <%end%>
+          </p>
+        <br> 
 
- 
-  
+        <p>Cooking time: <%= food.cooking_time %></p>
+        <p>Allergies: <%= food.allergies.join %></p> 
+        <p>Cooking instructions: <% food.cooking_instructions%></p> 
+
     <div style="color: white;">
         <p>Dish: <%= @food.name %></p> 
         <p>dietary preference: <%= @food.dietary_pref %></p> 
@@ -30,17 +44,10 @@
            <li> <%= instruction %> </li>
           </ul> </p>
           <% end %>
+
         
     
     </div>
-
-
-     
-
-
-
-
-
    </body>
 </html>
 
