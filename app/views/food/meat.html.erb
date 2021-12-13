@@ -18,7 +18,7 @@
   <div class="card-header">
     <ul class="nav nav-tabs card-header-tabs">
       <li class="nav-item">
-        <a class="nav-link active" href="/food/show">Meat</a>
+        <a class="nav-link active" href="/food/meat">Meat</a>
         <div class="card-body">
     
   </div>
@@ -39,8 +39,9 @@
   </div>
   <div class="card-body">
   <img class="card-img-top" src= <%=@meat_image%> alt="Card image cap">
-    <h5 class="card-title"><%= @meats.name %></h5>
+    <h2 class="card-title"><%= @meats.name %></h2>
     <p class="card-text"><%= @meats.description %></p>
+    <p class="card-text"><%= @meats.ingredients %></p>
   </div>
 </div>
 </center>

@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   root to: 'sessions#new'
   get '/food/vegan'
   get '/food/vegetarian'
-  
+  get '/food/meat'
+
   resources :food
   resources :users
   resources :sessions
