@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   get 'sign_up', to: 'users#new', as: 'sign_up'
   get 'logout', to: 'sessions#destroy', as: 'logout'
   root to: 'sessions#new'
-  
+  get '/food/vegan'
+  get '/food/vegetarian'
   
   resources :food
   resources :users

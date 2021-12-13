@@ -11,20 +11,18 @@
    </head>
   <body>
   <%= render "layouts/nav_bar" %>
-    <div >
-
-<center>
+  <center>
   <div class="card text-center">
   <div class="card-header">
     <ul class="nav nav-tabs card-header-tabs">
       <li class="nav-item">
-        <a class="nav-link active" href="/food/show">Meat</a>
+        <a class="nav-link" href="/food/show">Meat</a>
         <div class="card-body">
     
   </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/food/vegetarian">Vegetarian</a>
+        <a class="nav-link active" href="/food/vegetarian">Vegetarian</a>
         <div class="card-body">
     
   </div>
@@ -38,12 +36,11 @@
     </ul>
   </div>
   <div class="card-body">
-  <img class="card-img-top" src= <%=@meat_image%> alt="Card image cap">
-    <h5 class="card-title"><%= @meats.name %></h5>
-    <p class="card-text"><%= @meats.description %></p>
+  <img class="card-img-top" src= <%=@vegetarian_image%> alt="Card image cap">
+    <h5 class="card-title"><%= @vegetarians.name %></h5>
+    <p class="card-text"><%= @vegetarians.description %></p>
   </div>
 </div>
 </center>
-   </body>
-</html>
-
+  </body>
+  </html>
