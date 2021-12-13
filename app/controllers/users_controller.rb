@@ -16,8 +16,7 @@ class UsersController < ApplicationController
   def index 
     if params[:search_by_recipe] != "" 
       @recipe_searched = Food.where("lower(name) = ?", params[:search_by_recipe].downcase)
-    end 
-    p @recipe_searched
+    end
   end 
 
   private
