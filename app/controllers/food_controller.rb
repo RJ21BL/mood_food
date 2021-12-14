@@ -9,7 +9,9 @@ class FoodController < ApplicationController
   end
 
   def index 
-    @foods = Food.all
+    p @foods = Food.all
+    p '+++++'
+    p @foods[1]
   end
 
   def show
