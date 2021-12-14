@@ -8,3 +8,2442 @@ Migrating to Users (20211208221148)
   [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(976718932431307380)[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(976718932431307380)[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(976718932431307380)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Create (4.0ms)[0m  [1m[32mINSERT INTO "foods" ("name", "dietary_pref", "cooking_time", "created_at", "updated_at", "cooking_instructions", "ingredients") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Plant power"], ["dietary_pref", "Vegan"], ["cooking_time", "30"], ["created_at", "2021-12-10 10:54:57.220705"], ["updated_at", "2021-12-10 10:54:57.220705"], ["cooking_instructions", "[\"To make the meat sauce\", \"heat 2 tbsp olive oil in a frying pan and cook 750g lean beef mince in two batches for about 10 mins until browned all over.\", \"Finely chop 4 slices of prosciutto from a 90g pack\", \"then stir through the meat mixture.\", \"Pour over 800g passata or half our basic tomato sauce recipe and 200ml hot beef stock. Add a little grated nutmeg then season.\", \"Bring up to the boil, then simmer for 30 mins until the sauce looks rich.\", \"Heat oven to 180C/fan/160C/gas 4 and lightly oil an ovenproof dish (about 30 x 20cm).\", \"Spoon one third of the meat sauce into the dish, then cover with some fresh lasagne sheets from a 300g pack. Drizzle over roughly 130g ready-made or homemade white sauce.\", \"Repeat until you have 3 layers of pasta. Cover with the remaining 390g white sauce, making sure you can’t see any pasta poking through.\", \"Scatter 125g torn mozzarella over the top.\", \"Arrange the rest of the prosciutto on top. Bake for 45 mins until the top is bubbling and lightly browned.\"]"], ["ingredients", "[\"2 olive oil, plus a little for the dish\", \"750g lean beef mince\", \"90g pack prosciutto\", \"tomato sauce\", \"200ml hot beef stock\", \"a little grated nutmeg\", \"300g pack fresh lasagne sheets\", \"white sauce\", \"125g ball mozzarella, torn into thin strips\"]"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Create (0.8ms)[0m  [1m[32mINSERT INTO "foods" ("name", "dietary_pref", "cooking_time", "created_at", "updated_at", "cooking_instructions", "ingredients") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Plant power"], ["dietary_pref", "Vegan"], ["cooking_time", "30"], ["created_at", "2021-12-10 10:55:55.301608"], ["updated_at", "2021-12-10 10:55:55.301608"], ["cooking_instructions", "[\"To make the meat sauce\", \"heat 2 tbsp olive oil in a frying pan and cook 750g lean beef mince in two batches for about 10 mins until browned all over.\", \"Finely chop 4 slices of prosciutto from a 90g pack\", \"then stir through the meat mixture.\", \"Pour over 800g passata or half our basic tomato sauce recipe and 200ml hot beef stock. Add a little grated nutmeg then season.\", \"Bring up to the boil, then simmer for 30 mins until the sauce looks rich.\", \"Heat oven to 180C/fan/160C/gas 4 and lightly oil an ovenproof dish (about 30 x 20cm).\", \"Spoon one third of the meat sauce into the dish, then cover with some fresh lasagne sheets from a 300g pack. Drizzle over roughly 130g ready-made or homemade white sauce.\", \"Repeat until you have 3 layers of pasta. Cover with the remaining 390g white sauce, making sure you can’t see any pasta poking through.\", \"Scatter 125g torn mozzarella over the top.\", \"Arrange the rest of the prosciutto on top. Bake for 45 mins until the top is bubbling and lightly browned.\"]"], ["ingredients", "[\"2 olive oil, plus a little for the dish\", \"750g lean beef mince\", \"90g pack prosciutto\", \"tomato sauce\", \"200ml hot beef stock\", \"a little grated nutmeg\", \"300g pack fresh lasagne sheets\", \"white sauce\", \"125g ball mozzarella, torn into thin strips\"]"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Create (0.4ms)[0m  [1m[32mINSERT INTO "foods" ("name", "dietary_pref", "cooking_time", "created_at", "updated_at", "cooking_instructions", "ingredients") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Jerk chicks"], ["dietary_pref", "Carnivore"], ["cooking_time", "60"], ["created_at", "2021-12-10 10:55:55.306514"], ["updated_at", "2021-12-10 10:55:55.306514"], ["cooking_instructions", "[\"To make the meat sauce\", \"heat 2 tbsp olive oil in a frying pan and cook 750g lean beef mince in two batches for about 10 mins until browned all over.\", \"Finely chop 4 slices of prosciutto from a 90g pack\", \"then stir through the meat mixture.\", \"Pour over 800g passata or half our basic tomato sauce recipe and 200ml hot beef stock. Add a little grated nutmeg then season.\", \"Bring up to the boil, then simmer for 30 mins until the sauce looks rich.\", \"Heat oven to 180C/fan/160C/gas 4 and lightly oil an ovenproof dish (about 30 x 20cm).\", \"Spoon one third of the meat sauce into the dish, then cover with some fresh lasagne sheets from a 300g pack. Drizzle over roughly 130g ready-made or homemade white sauce.\", \"Repeat until you have 3 layers of pasta. Cover with the remaining 390g white sauce, making sure you can’t see any pasta poking through.\", \"Scatter 125g torn mozzarella over the top.\", \"Arrange the rest of the prosciutto on top. Bake for 45 mins until the top is bubbling and lightly browned.\"]"], ["ingredients", "[\"2 olive oil, plus a little for the dish\", \"750g lean beef mince\", \"90g pack prosciutto\", \"tomato sauce\", \"200ml hot beef stock\", \"a little grated nutmeg\", \"300g pack fresh lasagne sheets\", \"white sauce\", \"125g ball mozzarella, torn into thin strips\"]"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Create (0.2ms)[0m  [1m[32mINSERT INTO "foods" ("name", "dietary_pref", "cooking_time", "created_at", "updated_at", "cooking_instructions", "ingredients") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Go fish"], ["dietary_pref", "Vegatarian"], ["cooking_time", "60"], ["created_at", "2021-12-10 10:55:55.309749"], ["updated_at", "2021-12-10 10:55:55.309749"], ["cooking_instructions", "[\"To make the meat sauce\", \"heat 2 tbsp olive oil in a frying pan and cook 750g lean beef mince in two batches for about 10 mins until browned all over.\", \"Finely chop 4 slices of prosciutto from a 90g pack\", \"then stir through the meat mixture.\", \"Pour over 800g passata or half our basic tomato sauce recipe and 200ml hot beef stock. Add a little grated nutmeg then season.\", \"Bring up to the boil, then simmer for 30 mins until the sauce looks rich.\", \"Heat oven to 180C/fan/160C/gas 4 and lightly oil an ovenproof dish (about 30 x 20cm).\", \"Spoon one third of the meat sauce into the dish, then cover with some fresh lasagne sheets from a 300g pack. Drizzle over roughly 130g ready-made or homemade white sauce.\", \"Repeat until you have 3 layers of pasta. Cover with the remaining 390g white sauce, making sure you can’t see any pasta poking through.\", \"Scatter 125g torn mozzarella over the top.\", \"Arrange the rest of the prosciutto on top. Bake for 45 mins until the top is bubbling and lightly browned.\"]"], ["ingredients", "[\"2 olive oil, plus a little for the dish\", \"750g lean beef mince\", \"90g pack prosciutto\", \"tomato sauce\", \"200ml hot beef stock\", \"a little grated nutmeg\", \"300g pack fresh lasagne sheets\", \"white sauce\", \"125g ball mozzarella, torn into thin strips\"]"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/food" for ::1 at 2021-12-13 14:10:01 +0000
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.6ms | Allocations: 338)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.6ms | Allocations: 100)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.9ms | Allocations: 224)
+  Rendered food/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1662)
+  Rendered layout layouts/application.html.erb (Duration: 28.6ms | Allocations: 11188)
+Completed 200 OK in 41ms (Views: 32.3ms | ActiveRecord: 0.0ms | Allocations: 14949)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:12:03 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 255)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1365)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3281)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 4642)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:12:39 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 255)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1365)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3281)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 4654)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:12:40 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1975)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 2478)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:13:19 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 255)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1365)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3279)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 4636)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:13:45 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 258)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.5ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1374)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3300)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 4668)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:13:47 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1975)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 2482)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:13:49 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1985)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 2490)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:14:05 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.8ms | Allocations: 259)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1373)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4910)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 6562)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:14:06 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 258)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1368)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3282)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 4632)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:14:36 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 261)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1371)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3285)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 4642)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:14:58 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1369)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3283)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 4631)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:17:00 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 258)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 99)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1369)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3283)
+Completed 200 OK in 9ms (Views: 8.1ms | Allocations: 4626)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:17:09 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 258)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 99)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1369)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3288)
+Completed 200 OK in 11ms (Views: 9.5ms | Allocations: 4642)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:17:10 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1973)
+Completed 200 OK in 4ms (Views: 3.5ms | Allocations: 2468)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:17:22 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (2.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/food_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered food/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 329)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2067)
+Completed 200 OK in 34ms (Views: 3.8ms | ActiveRecord: 14.7ms | Allocations: 11443)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:18:42 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 258)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 99)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1373)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3291)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 4646)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:18:56 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 260)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1370)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3284)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 4626)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:19:17 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 99)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1370)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3284)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 4628)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:19:29 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 99)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.5ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1370)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3284)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 4628)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:46:51 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.8ms | Allocations: 260)
+  Rendered layouts/_carousel_images.html.erb (Duration: 3.3ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.5ms | Allocations: 223)
+  Rendered food/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1372)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 3300)
+Completed 200 OK in 14ms (Views: 12.9ms | Allocations: 4650)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:47:12 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 260)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1373)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3292)
+Completed 200 OK in 9ms (Views: 7.9ms | Allocations: 4648)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:47:35 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 260)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1370)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3291)
+Completed 200 OK in 9ms (Views: 7.7ms | Allocations: 4644)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:57:05 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 260)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1374)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3292)
+Completed 200 OK in 9ms (Views: 7.8ms | Allocations: 4645)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:59:10 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 260)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1370)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3284)
+Completed 200 OK in 9ms (Views: 7.8ms | Allocations: 4643)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:04:49 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 260)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1370)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3301)
+Completed 200 OK in 11ms (Views: 9.7ms | Allocations: 4645)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:04:52 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1973)
+Completed 200 OK in 4ms (Views: 3.5ms | Allocations: 2477)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:05:01 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 260)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1374)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3293)
+Completed 200 OK in 9ms (Views: 8.0ms | Allocations: 4648)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:05:02 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1973)
+Completed 200 OK in 4ms (Views: 3.4ms | Allocations: 2474)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:05:26 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 260)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1370)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3291)
+Completed 200 OK in 9ms (Views: 7.7ms | Allocations: 4631)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:09:39 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 260)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1370)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3284)
+Completed 200 OK in 9ms (Views: 7.7ms | Allocations: 4627)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:09:40 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1976)
+Completed 200 OK in 4ms (Views: 3.4ms | Allocations: 2469)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:10:15 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 262)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.5ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1376)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3291)
+Completed 200 OK in 9ms (Views: 7.9ms | Allocations: 4637)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:12:43 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.7ms | Allocations: 261)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1310)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3236)
+Completed 200 OK in 9ms (Views: 8.0ms | Allocations: 4600)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:15:34 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 260)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.6ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1304)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3223)
+Completed 200 OK in 9ms (Views: 7.3ms | Allocations: 4583)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:16:21 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 260)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1300)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3221)
+Completed 200 OK in 8ms (Views: 7.4ms | Allocations: 4564)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:16:22 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1973)
+Completed 200 OK in 4ms (Views: 3.3ms | Allocations: 2470)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:17:10 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.6ms | Allocations: 260)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1300)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3217)
+Completed 200 OK in 9ms (Views: 7.6ms | Allocations: 4569)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:17:20 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 261)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1302)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3217)
+Completed 200 OK in 9ms (Views: 7.8ms | Allocations: 4564)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:17:21 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1973)
+Completed 200 OK in 5ms (Views: 3.4ms | Allocations: 2472)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:17:34 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 260)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1308)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3234)
+Completed 200 OK in 9ms (Views: 8.1ms | Allocations: 4595)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:18:32 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 260)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1304)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3223)
+Completed 200 OK in 9ms (Views: 7.6ms | Allocations: 4595)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:26:11 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1973)
+Completed 200 OK in 4ms (Views: 3.3ms | Allocations: 2470)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:27:14 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1299)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3220)
+Completed 200 OK in 9ms (Views: 7.9ms | Allocations: 4570)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:27:32 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.4ms | Allocations: 259)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 95)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1296)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 3210)
+Completed 200 OK in 8ms (Views: 6.7ms | Allocations: 4553)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:28:18 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.5ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1305)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3219)
+Completed 200 OK in 10ms (Views: 8.7ms | Allocations: 4570)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:28:26 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1976)
+Completed 200 OK in 4ms (Views: 3.3ms | Allocations: 2469)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:28:27 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1973)
+Completed 200 OK in 4ms (Views: 3.2ms | Allocations: 2469)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:28:33 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1973)
+Completed 200 OK in 4ms (Views: 3.3ms | Allocations: 2463)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:29:30 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.6ms | Allocations: 259)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 105)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.6ms | Allocations: 223)
+  Rendered food/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1310)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3238)
+Completed 200 OK in 12ms (Views: 10.5ms | Allocations: 4599)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:30:58 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 105)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1308)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3228)
+Completed 200 OK in 9ms (Views: 8.1ms | Allocations: 4583)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:31:15 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1309)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3229)
+Completed 200 OK in 9ms (Views: 7.7ms | Allocations: 4583)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:31:24 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 105)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1310)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3229)
+Completed 200 OK in 8ms (Views: 7.5ms | Allocations: 4583)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:31:26 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.2ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1973)
+Completed 200 OK in 4ms (Views: 3.4ms | Allocations: 2472)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:31:45 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 105)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.5ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1306)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3227)
+Completed 200 OK in 9ms (Views: 7.5ms | Allocations: 4575)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:31:53 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.5ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1305)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3219)
+Completed 200 OK in 9ms (Views: 7.5ms | Allocations: 4568)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:32:05 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 105)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1306)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3220)
+Completed 200 OK in 9ms (Views: 7.6ms | Allocations: 4573)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:32:26 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 105)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1306)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3223)
+Completed 200 OK in 9ms (Views: 8.2ms | Allocations: 4572)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:32:40 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 105)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1307)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3233)
+Completed 200 OK in 10ms (Views: 9.3ms | Allocations: 4577)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:32:49 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 105)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1317)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3231)
+Completed 200 OK in 9ms (Views: 8.2ms | Allocations: 4585)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:32:50 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1979)
+Completed 200 OK in 4ms (Views: 3.4ms | Allocations: 2466)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:33:06 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1309)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3229)
+Completed 200 OK in 9ms (Views: 7.6ms | Allocations: 4576)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:34:46 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1309)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3227)
+Completed 200 OK in 9ms (Views: 7.8ms | Allocations: 4585)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:35:10 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1305)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3220)
+Completed 200 OK in 9ms (Views: 7.8ms | Allocations: 4577)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:35:11 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1973)
+Completed 200 OK in 4ms (Views: 3.3ms | Allocations: 2468)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:37:13 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 263)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1309)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3235)
+Completed 200 OK in 10ms (Views: 9.2ms | Allocations: 4588)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:38:30 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 271)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.5ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1325)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3239)
+Completed 200 OK in 9ms (Views: 7.7ms | Allocations: 4603)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:38:32 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1975)
+Completed 200 OK in 4ms (Views: 3.3ms | Allocations: 2474)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:39:21 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 271)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.4ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1321)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3241)
+Completed 200 OK in 9ms (Views: 7.6ms | Allocations: 4604)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:39:41 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 271)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1317)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3238)
+Completed 200 OK in 9ms (Views: 7.6ms | Allocations: 4593)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:39:42 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1973)
+Completed 200 OK in 4ms (Views: 3.3ms | Allocations: 2476)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:41:12 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 260)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1306)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3220)
+Completed 200 OK in 9ms (Views: 7.6ms | Allocations: 4570)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:41:35 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 261)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1307)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3221)
+Completed 200 OK in 8ms (Views: 7.5ms | Allocations: 4574)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:42:24 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.8ms | Allocations: 262)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1314)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3240)
+Completed 200 OK in 9ms (Views: 8.1ms | Allocations: 4600)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:42:57 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.5ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1308)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3228)
+Completed 200 OK in 9ms (Views: 7.6ms | Allocations: 4586)
+
+
+Started GET "/food" for ::1 at 2021-12-13 15:42:59 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1973)
+Completed 200 OK in 4ms (Views: 3.2ms | Allocations: 2478)
+
+
+Started GET "/food" for ::1 at 2021-12-13 16:56:04 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.6ms | Allocations: 260)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1308)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3225)
+Completed 200 OK in 10ms (Views: 8.7ms | Allocations: 4576)
+
+
+Started GET "/food" for ::1 at 2021-12-13 16:56:22 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1306)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3230)
+Completed 200 OK in 9ms (Views: 7.6ms | Allocations: 4600)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:12:21 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 2.4ms | Allocations: 258)
+  Rendered layouts/_carousel_images.html.erb (Duration: 1.0ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 1.6ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 1304)
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 3218)
+Completed 200 OK in 45ms (Views: 35.6ms | Allocations: 4577)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:13:17 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.6ms | Allocations: 254)
+  Rendered layouts/_carousel_images.html.erb (Duration: 1.1ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.5ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1300)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3214)
+Completed 200 OK in 11ms (Views: 10.1ms | Allocations: 4569)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:21:19 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 253)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 1.2ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1307)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3233)
+Completed 200 OK in 11ms (Views: 9.7ms | Allocations: 4589)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:21:47 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 1.2ms | Allocations: 252)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.4ms | Allocations: 105)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.6ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1300)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3216)
+Completed 200 OK in 11ms (Views: 10.1ms | Allocations: 4571)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:21:59 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.6ms | Allocations: 252)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.5ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1300)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3225)
+Completed 200 OK in 11ms (Views: 9.9ms | Allocations: 4586)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:22:09 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.6ms | Allocations: 252)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1298)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3212)
+Completed 200 OK in 10ms (Views: 8.8ms | Allocations: 4550)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:22:21 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.6ms | Allocations: 252)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.5ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.5ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1298)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3212)
+Completed 200 OK in 11ms (Views: 9.6ms | Allocations: 4563)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:22:37 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1973)
+Completed 200 OK in 4ms (Views: 3.3ms | Allocations: 2470)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:22:51 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.6ms | Allocations: 252)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.5ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1304)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3230)
+Completed 200 OK in 10ms (Views: 8.5ms | Allocations: 4587)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:23:02 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 1.0ms | Allocations: 251)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.4ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.6ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1297)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3211)
+Completed 200 OK in 11ms (Views: 9.8ms | Allocations: 4556)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:24:00 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 254)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.5ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1304)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3230)
+Completed 200 OK in 10ms (Views: 8.6ms | Allocations: 4590)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:24:04 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1973)
+Completed 200 OK in 4ms (Views: 3.7ms | Allocations: 2488)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:25:27 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 251)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.5ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1299)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3224)
+Completed 200 OK in 9ms (Views: 8.5ms | Allocations: 4582)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:26:31 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 251)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1305)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3231)
+Completed 200 OK in 11ms (Views: 9.7ms | Allocations: 4595)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:27:12 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.7ms | Allocations: 251)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1297)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3211)
+Completed 200 OK in 9ms (Views: 8.4ms | Allocations: 4568)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:27:13 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1973)
+Completed 200 OK in 4ms (Views: 3.4ms | Allocations: 2470)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:28:01 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.6ms | Allocations: 251)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.7ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1297)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3212)
+Completed 200 OK in 9ms (Views: 7.9ms | Allocations: 4558)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:28:08 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 250)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1299)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3225)
+Completed 200 OK in 9ms (Views: 7.8ms | Allocations: 4581)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:28:31 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 251)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1299)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3224)
+Completed 200 OK in 9ms (Views: 7.7ms | Allocations: 4587)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:28:32 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1973)
+Completed 200 OK in 4ms (Views: 3.4ms | Allocations: 2474)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:28:40 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 251)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.5ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1297)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3212)
+Completed 200 OK in 10ms (Views: 9.2ms | Allocations: 4555)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:28:49 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 251)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1305)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3231)
+Completed 200 OK in 9ms (Views: 7.6ms | Allocations: 4597)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:28:57 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 251)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1297)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3211)
+Completed 200 OK in 9ms (Views: 7.9ms | Allocations: 4560)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:30:17 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.7ms | Allocations: 286)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1332)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3246)
+Completed 200 OK in 10ms (Views: 8.7ms | Allocations: 4599)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:35:27 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.6ms | Allocations: 286)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1340)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3266)
+Completed 200 OK in 9ms (Views: 7.9ms | Allocations: 4630)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:35:28 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1973)
+Completed 200 OK in 4ms (Views: 3.4ms | Allocations: 2478)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:36:57 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 252)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 223)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1299)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3214)
+Completed 200 OK in 9ms (Views: 7.9ms | Allocations: 4556)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:37:50 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.6ms | Allocations: 252)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1298)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3212)
+Completed 200 OK in 9ms (Views: 7.7ms | Allocations: 4559)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:38:15 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 252)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1298)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3222)
+Completed 200 OK in 8ms (Views: 7.4ms | Allocations: 4571)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:38:37 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 252)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1304)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3230)
+Completed 200 OK in 8ms (Views: 7.5ms | Allocations: 4588)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:38:48 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 253)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1299)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3215)
+Completed 200 OK in 9ms (Views: 8.0ms | Allocations: 4572)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:38:49 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1983)
+Completed 200 OK in 4ms (Views: 3.3ms | Allocations: 2481)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:40:02 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 253)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1303)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3218)
+Completed 200 OK in 9ms (Views: 8.1ms | Allocations: 4582)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:40:03 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1973)
+Completed 200 OK in 4ms (Views: 3.2ms | Allocations: 2470)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:40:17 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.6ms | Allocations: 253)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1299)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3213)
+Completed 200 OK in 9ms (Views: 8.0ms | Allocations: 4555)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:40:18 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1973)
+Completed 200 OK in 4ms (Views: 3.3ms | Allocations: 2464)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:41:45 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 254)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.6ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1306)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3233)
+Completed 200 OK in 9ms (Views: 7.3ms | Allocations: 4600)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:41:51 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1985)
+Completed 200 OK in 4ms (Views: 3.2ms | Allocations: 2483)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:42:26 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 253)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1302)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3228)
+Completed 200 OK in 8ms (Views: 7.5ms | Allocations: 4583)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:42:37 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.6ms | Allocations: 253)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1302)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3217)
+Completed 200 OK in 9ms (Views: 8.0ms | Allocations: 4561)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:44:11 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 253)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1300)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3214)
+Completed 200 OK in 9ms (Views: 7.9ms | Allocations: 4558)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:44:52 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 253)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1299)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3213)
+Completed 200 OK in 9ms (Views: 8.0ms | Allocations: 4566)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:46:03 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 253)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1307)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3233)
+Completed 200 OK in 8ms (Views: 7.5ms | Allocations: 4601)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:47:05 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 252)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.5ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1301)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3227)
+Completed 200 OK in 9ms (Views: 8.1ms | Allocations: 4585)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:47:32 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 252)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1302)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3217)
+Completed 200 OK in 9ms (Views: 7.9ms | Allocations: 4582)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:47:55 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 252)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1304)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3230)
+Completed 200 OK in 9ms (Views: 7.9ms | Allocations: 4590)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:48:06 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 252)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1298)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3212)
+Completed 200 OK in 10ms (Views: 8.3ms | Allocations: 4573)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:48:31 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.8ms | Allocations: 252)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1302)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3228)
+Completed 200 OK in 9ms (Views: 7.8ms | Allocations: 4576)
+
+
+Started GET "/users/new" for ::1 at 2021-12-13 23:48:50 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.2ms | Allocations: 81)
+  Rendered users/new.html.erb within layouts/application (Duration: 25.7ms | Allocations: 6225)
+  Rendered layout layouts/application.html.erb (Duration: 28.2ms | Allocations: 7999)
+Completed 200 OK in 79ms (Views: 30.2ms | ActiveRecord: 22.0ms | Allocations: 16903)
+
+
+Started GET "/users/login" for ::1 at 2021-12-13 23:48:52 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"login"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered users/show.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2020)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2088)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2660)
+
+
+  
+ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
+    19:         <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 100rem;">
+    20:           <div class="card-body ">
+    21:         <h3> Personal Detail </h3>
+    22:           <p>Name: <%= current_user.first_name %> </p>
+    23:           <p>Surname: <%= current_user.surname %> </p>
+    24:           <p>Email: <%= current_user.email %> </p>
+    25:           <p>Gender: <%= current_user.gender.capitalize %> </p>
+  
+app/views/users/show.html.erb:22
+Started GET "/food" for ::1 at 2021-12-13 23:49:03 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1985)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 2495)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:49:48 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.6ms | Allocations: 249)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1298)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3212)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 4569)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:52:12 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 127)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1317)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3231)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 4575)
+
+
+Started GET "/..." for ::1 at 2021-12-13 23:52:12 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/..."):
+  
+Started GET "/food" for ::1 at 2021-12-13 23:52:55 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.4ms | Allocations: 127)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1320)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3246)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 4607)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:53:11 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.8ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 117)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1307)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3233)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 4595)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:53:50 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 117)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1310)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3224)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 4584)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:53:52 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1973)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 2481)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:55:51 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 117)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.7ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1313)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3239)
+Completed 200 OK in 9ms (Views: 7.8ms | Allocations: 4596)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:56:36 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 117)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1308)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3222)
+Completed 200 OK in 10ms (Views: 8.8ms | Allocations: 4576)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:56:37 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1973)
+Completed 200 OK in 4ms (Views: 3.1ms | Allocations: 2482)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:57:09 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 117)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1308)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3222)
+Completed 200 OK in 9ms (Views: 7.9ms | Allocations: 4566)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:57:13 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1973)
+Completed 200 OK in 4ms (Views: 3.4ms | Allocations: 2488)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:57:29 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1985)
+Completed 200 OK in 4ms (Views: 3.4ms | Allocations: 2479)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:57:55 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 117)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1310)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3236)
+Completed 200 OK in 9ms (Views: 8.0ms | Allocations: 4585)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:58:16 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 117)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1307)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3221)
+Completed 200 OK in 9ms (Views: 7.8ms | Allocations: 4565)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:58:39 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.7ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 117)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1310)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3231)
+Completed 200 OK in 10ms (Views: 9.2ms | Allocations: 4586)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:58:41 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1974)
+Completed 200 OK in 4ms (Views: 3.5ms | Allocations: 2465)
+
+
+Started GET "/food" for ::1 at 2021-12-13 23:59:11 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 97)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1295)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3221)
+Completed 200 OK in 9ms (Views: 7.7ms | Allocations: 4578)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:00:09 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1973)
+Completed 200 OK in 4ms (Views: 3.5ms | Allocations: 2478)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:02:24 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 97)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1288)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3202)
+Completed 200 OK in 9ms (Views: 8.0ms | Allocations: 4553)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:03:27 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.8ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 97)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1288)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3202)
+Completed 200 OK in 9ms (Views: 7.9ms | Allocations: 4545)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:03:28 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1974)
+Completed 200 OK in 4ms (Views: 3.3ms | Allocations: 2475)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:03:46 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 96)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1289)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3218)
+Completed 200 OK in 9ms (Views: 7.7ms | Allocations: 4577)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:03:47 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1973)
+Completed 200 OK in 4ms (Views: 3.5ms | Allocations: 2466)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:03:59 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 97)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1287)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3201)
+Completed 200 OK in 9ms (Views: 7.6ms | Allocations: 4550)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:04:08 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 97)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1288)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3202)
+Completed 200 OK in 9ms (Views: 7.7ms | Allocations: 4554)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:04:27 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.8ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 97)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1293)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3219)
+Completed 200 OK in 9ms (Views: 8.0ms | Allocations: 4567)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:05:21 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1292)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3218)
+Completed 200 OK in 9ms (Views: 7.7ms | Allocations: 4570)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:05:34 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.6ms | Allocations: 222)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1289)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3203)
+Completed 200 OK in 9ms (Views: 7.8ms | Allocations: 4559)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:07:31 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 97)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 223)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1289)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3204)
+Completed 200 OK in 9ms (Views: 7.5ms | Allocations: 4551)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:07:35 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1974)
+Completed 200 OK in 4ms (Views: 3.5ms | Allocations: 2479)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:15:09 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 97)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 223)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1296)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3222)
+Completed 200 OK in 9ms (Views: 7.8ms | Allocations: 4581)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:15:51 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 97)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.5ms | Allocations: 208)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1274)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3188)
+Completed 200 OK in 9ms (Views: 7.8ms | Allocations: 4544)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:16:06 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1974)
+Completed 200 OK in 4ms (Views: 3.4ms | Allocations: 2461)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:16:24 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.7ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 97)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 223)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1289)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3204)
+Completed 200 OK in 9ms (Views: 7.7ms | Allocations: 4564)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:17:00 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 97)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 212)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1277)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3191)
+Completed 200 OK in 9ms (Views: 7.7ms | Allocations: 4540)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:17:38 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.8ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.4ms | Allocations: 97)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 198)
+  Rendered food/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1269)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 3195)
+Completed 200 OK in 11ms (Views: 8.9ms | Allocations: 4551)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:22:34 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1973)
+Completed 200 OK in 4ms (Views: 3.7ms | Allocations: 2476)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:29:06 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 111)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 196)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1279)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3205)
+Completed 200 OK in 11ms (Views: 10.1ms | Allocations: 4568)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:30:02 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 111)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 196)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1275)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3189)
+Completed 200 OK in 9ms (Views: 8.5ms | Allocations: 4532)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:30:02 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1973)
+Completed 200 OK in 4ms (Views: 3.4ms | Allocations: 2464)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:36:55 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 197)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1554)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3469)
+Completed 200 OK in 10ms (Views: 8.5ms | Allocations: 4822)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:38:49 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 196)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 73)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1547)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3462)
+Completed 200 OK in 10ms (Views: 8.6ms | Allocations: 4819)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:39:30 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 196)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 76)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1559)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3485)
+Completed 200 OK in 10ms (Views: 8.8ms | Allocations: 4847)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:40:17 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.7ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 196)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 76)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1554)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3480)
+Completed 200 OK in 9ms (Views: 8.0ms | Allocations: 4834)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:41:59 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.6ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 94)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 196)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 77)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1537)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3452)
+Completed 200 OK in 10ms (Views: 8.6ms | Allocations: 4816)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:42:32 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.4ms | Allocations: 93)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 196)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 62)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1519)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3434)
+Completed 200 OK in 10ms (Views: 8.4ms | Allocations: 4787)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:43:09 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 1.8ms | Allocations: 93)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 197)
+  Rendered food/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1259)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3186)
+Completed 200 OK in 11ms (Views: 10.0ms | Allocations: 4534)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:43:49 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 93)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 196)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1264)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3190)
+Completed 200 OK in 9ms (Views: 7.9ms | Allocations: 4546)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:44:30 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 93)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 196)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1260)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3174)
+Completed 200 OK in 9ms (Views: 7.6ms | Allocations: 4533)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:45:28 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 93)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.5ms | Allocations: 196)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1265)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3191)
+Completed 200 OK in 9ms (Views: 7.5ms | Allocations: 4545)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:46:18 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 93)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 196)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1261)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3175)
+Completed 200 OK in 9ms (Views: 7.7ms | Allocations: 4532)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:47:04 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.4ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 93)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 197)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1263)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3178)
+Completed 200 OK in 7ms (Views: 6.6ms | Allocations: 4530)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:47:19 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 93)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 196)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1260)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3175)
+Completed 200 OK in 8ms (Views: 7.4ms | Allocations: 4524)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:49:19 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 93)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 195)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1270)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3196)
+Completed 200 OK in 9ms (Views: 7.9ms | Allocations: 4546)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:53:12 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 93)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 195)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1263)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3189)
+Completed 200 OK in 9ms (Views: 8.0ms | Allocations: 4543)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:55:00 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 93)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 195)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1263)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3189)
+Completed 200 OK in 9ms (Views: 7.7ms | Allocations: 4535)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:55:29 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.4ms | Allocations: 93)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 195)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1259)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3174)
+Completed 200 OK in 9ms (Views: 7.9ms | Allocations: 4532)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:55:47 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 93)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 195)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1258)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 3178)
+Completed 200 OK in 10ms (Views: 9.3ms | Allocations: 4534)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:55:49 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1976)
+Completed 200 OK in 4ms (Views: 3.6ms | Allocations: 2469)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:57:21 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 93)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 195)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1266)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3189)
+Completed 200 OK in 11ms (Views: 10.0ms | Allocations: 4540)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:58:05 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 93)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 195)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1262)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3188)
+Completed 200 OK in 9ms (Views: 7.6ms | Allocations: 4554)
+
+
+Started GET "/food" for ::1 at 2021-12-14 00:59:54 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 93)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 195)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1263)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3177)
+Completed 200 OK in 8ms (Views: 7.5ms | Allocations: 4524)
+
+
+Started GET "/food" for ::1 at 2021-12-14 01:00:10 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 93)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 195)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1263)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3178)
+Completed 200 OK in 9ms (Views: 8.2ms | Allocations: 4523)
+
+
+Started GET "/food" for ::1 at 2021-12-14 01:00:12 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1978)
+Completed 200 OK in 4ms (Views: 3.3ms | Allocations: 2490)
+
+
+Started GET "/food" for ::1 at 2021-12-14 01:00:19 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 93)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 195)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1265)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3180)
+Completed 200 OK in 8ms (Views: 7.5ms | Allocations: 4532)
+
+
+Started GET "/food" for ::1 at 2021-12-14 01:00:44 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 93)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 195)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1262)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3188)
+Completed 200 OK in 10ms (Views: 9.1ms | Allocations: 4538)
+
+
+Started GET "/food" for ::1 at 2021-12-14 01:00:55 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 249)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 93)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 195)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1269)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3186)
+Completed 200 OK in 9ms (Views: 8.2ms | Allocations: 4539)
+
+
+Started GET "/food" for ::1 at 2021-12-14 01:01:11 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 93)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.3ms | Allocations: 195)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1265)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3188)
+Completed 200 OK in 9ms (Views: 7.8ms | Allocations: 4542)
+
+
+Started GET "/food" for ::1 at 2021-12-14 01:02:18 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1973)
+Completed 200 OK in 4ms (Views: 3.4ms | Allocations: 2470)
+
+
+Started GET "/food" for ::1 at 2021-12-14 01:02:40 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 93)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.4ms | Allocations: 195)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1263)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3185)
+Completed 200 OK in 9ms (Views: 8.4ms | Allocations: 4548)
+
+
+Started GET "/food" for ::1 at 2021-12-14 01:02:59 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1977)
+Completed 200 OK in 4ms (Views: 3.5ms | Allocations: 2468)
+
+

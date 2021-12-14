@@ -7,104 +7,43 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <style> 
-  
+  i {
+    margin: 20px;
+  padding-top: 8px;
+  padding-left: 10px;
+  }
 </style>
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
+  <body>
+  <%= render "layouts/nav_bar" %>
+  <%= render "layouts/carousel_images" %>
 
-<%= render "layouts/nav_bar" %>
-<%= render "layouts/carousel_images" %>
-
-<center>
-<a href="food/show"><button type="button" class="btn btn-primary btn-lg" style="color: white; border: 2px solid white; background-color:#5c3971">Mood Food</button></a>
-<row>
+  <center>
+  <a href="food/show"><button type="button" class="btn btn-primary btn-lg" style="color: white; border: 2px solid white; background-color:#5c3971">Mood Food</button></a>
+  <row>
   <br>
-    <p></p>
-</row>
-<%= render "layouts/carousel_recipe_cards" %>
+  </row>
+  <%= render "layouts/carousel_recipe_cards" %>
 
-
-
-<div class="row" style="margin:15px">
-<div class="column" >
-<div class="card" style="width: 18rem; border: 4px solid #5c3971">
-<img src="/lasange.webp" class="card-img-top" alt="...">
-<div class="card-body">
-<h5 class="card-title">Classic Lasagne</h5>
-<p class="card-text">Kids will love to help assemble this easiest ever pasta bake with streaky bacon, beef mince, a crème fraîche sauce and gooey mozzarella </p>
-</div>
-<ul class="list-group list-group-flush">
-<li class="list-group-item">An item</li>
-<li class="list-group-item">A second item</li>
-<li class="list-group-item">A third item</li>
-</ul>
-<div class="card-body">
-<a href="#" class="card-link">Recipe</a>
-</div>
-</div>
-</div>
-
-<div class="column">
-<p> "               " </p>
-</div>
-
-<div class="column">
-<div class="card" style="width: 18rem; border: 4px solid #5c3971">
-<img src="/chicken.webp" class="card-img-top" alt="...">
-<div class="card-body">
-<h5 class="card-title">Chicken Fajitas</h5>
-<p class="card-text">Need a simple, vibrant midweek meal the family will love? Put together these easy chicken fajitas and people can create their own masterpieces at the table</p>
-</div>
-<ul class="list-group list-group-flush">
-<li class="list-group-item">An item</li>
-<li class="list-group-item">A second item</li>
-<li class="list-group-item">A third item</li>
-</ul>
-<div class="card-body">
-<a href="#" class="card-link">Recipe</a>
-</div>
-</div>
-</div>
-
-<div class="column">
-<p> "               " </p>
-</div>
-
-<div class="column">
-<div class="card" style="width: 18rem; border: 4px solid #5c3971">
-<img src="/curry.webp" class="card-img-top" alt="...">
-<div class="card-body">
-<h5 class="card-title">Chicken Curry</h5>
-<p class="card-text">This easy staple chicken curry is a fantastic recipe for family dinners. It's made with just a handful of ingredients and is enriched with creamy yogurt</p>
-</div>
-<ul class="list-group list-group-flush">
-<li class="list-group-item">An item</li>
-<li class="list-group-item">A second item</li>
-<li class="list-group-item">A third item</li>
-</ul>
-<div class="card-body">
-<a href="#" class="card-link">Recipe</a>
-</div>
-</div>
-</div>
+  <div class="card-footer" style="background-color:#5C3971; font-size:40px; color:white; padding:10px;">
+  <i class="fa fa-facebook" aria-hidden="true"></i> 
+  <i class="fa fa-twitter" aria-hidden="true"></i>
+  <i class="fa fa-instagram" aria-hidden="true"></i>
+  <i class="fa fa-envelope" aria-hidden="true"></i>
+  </div>
 
 
 
 
+  </center>
 
-
-
-
-
-</div>
-</center>
-
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
 </html>

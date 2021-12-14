@@ -16,7 +16,7 @@
         <p>Dish: <%= @food.name %></p> 
         <p>dietary preference: <%= @food.dietary_pref %></p> 
         <p>ingridents: </p>
-        <% @food.ingredients.each do |ing| %>
+        <% @food.ingredients.each_line do |ing| %>
           <p> <ul> <li> <%= ing %> </li> </ul></p>
           <% end %>
          
@@ -24,7 +24,7 @@
        
         <p>cooking_time: <%= @food.cooking_time %></p>
         <p>allergies: <%= @food.allergies.join %></p> 
-        <p>cooking_instruction: <% @food.cooking_instruction.each do |instruction| %></p> 
+        <p>cooking_instruction: <% @food.cooking_instructions.each_line do |instruction| %></p> 
           <p>  <ul>
            <li> <%= instruction %> </li>
           </ul> </p>
