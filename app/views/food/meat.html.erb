@@ -7,7 +7,11 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
+    <style>
+  
+ 
+
+</style>
    </head>
   <body>
   <%= render "layouts/nav_bar" %>
@@ -37,9 +41,10 @@
       </li>
     </ul>
   </div>
-  <div class="card-body">
-  <img class="card-img-top" src= <%=@meat_image%> alt="Card image cap">
-    <h2 class="card-title"><%= @meats.name %></h2>
+  <div class="card-body" >
+  <img class="card-img-top" style="width: 60%;" src= <%=@meat_image%> alt="Card image cap">
+  <hr>  
+  <h2 class="card-title"><%= @meats.name %></h2>
     <p class="card-text"><%= @meats.description %></p>
     <p class="card-text"><%= @meats.ingredients %></p>
     
