@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+   </head>
+  <body>
+  <%= render "layouts/nav_bar" %>
+  <center>
+  <div class="card text-center">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link" href="/food/meat">Meat</a>
+        <div class="card-body">
+    
+  </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/food/vegetarian">Vegetarian</a>
+        <div class="card-body">
+    
+  </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/food/vegan">Vegan</a>
+        <div class="card-body">
+   
+  </div>
+      </li>
+    </ul>
+  </div>
+  <div class="card-body">
+  <% p @vegans %>
+  <% p @meats %>
+  <img class="card-img-top" src= <%=@vegan_image%> alt="Card image cap">
+    <h5 class="card-title"><%= @vegans.name %></h5>
+    <p class="card-text"><%= @vegans.description %></p>
+  </div>
+</div>
+</center>
+  </body>
+  </html>

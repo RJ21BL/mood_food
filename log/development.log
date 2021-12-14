@@ -1578,6 +1578,7 @@ Processing by FoodController#index as HTML
   Rendering layout layouts/application.html.erb
   Rendering food/index.html.erb within layouts/application
   Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+<<<<<<< HEAD
   Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
   Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
   Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
@@ -2292,11 +2293,782 @@ Completed 200 OK in 10ms (Views: 9.3ms | Allocations: 4534)
 
 
 Started GET "/food" for ::1 at 2021-12-14 00:55:49 +0000
+=======
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/layouts/_carousel_recipe_cards.erb:34
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 3.1ms | Allocations: 1075)
+  Rendered food/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1820)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 3548)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.3ms | Allocations: 4232)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:03:12 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered food/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 136)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 1879)
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 0.2ms | Allocations: 3065)
+
+
+Started GET "/food/vegetarian" for ::1 at 2021-12-13 14:03:41 +0000
+Processing by FoodController#vegetarian as HTML
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Vegetarian"]]
+  ↳ app/controllers/food_controller.rb:35:in `vegetarian'
+  Rendering layout layouts/application.html.erb
+  Rendering food/vegetarian.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.2ms | Allocations: 60)
+  Rendered food/vegetarian.html.erb within layouts/application (Duration: 1.0ms | Allocations: 301)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2031)
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.1ms | Allocations: 3297)
+
+
+Started GET "/food/vegan" for ::1 at 2021-12-13 14:03:45 +0000
+Processing by FoodController#vegan as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Vegan"]]
+  ↳ app/controllers/food_controller.rb:29:in `vegan'
+  Rendering layout layouts/application.html.erb
+  Rendering food/vegan.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered food/vegan.html.erb within layouts/application (Duration: 1.5ms | Allocations: 561)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 2289)
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.2ms | Allocations: 3544)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:06:58 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1 /* loading for inspect */ LIMIT $2[0m  [["dietary_pref", "Meat"], ["LIMIT", 11]]
+  ↳ app/controllers/food_controller.rb:19:in `p'
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.2ms | Allocations: 81)
+  Rendered food/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 165)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1962)
+Completed 200 OK in 24ms (Views: 4.3ms | ActiveRecord: 4.5ms | Allocations: 9504)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:10:27 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered food/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 691)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2625)
+Completed 200 OK in 28ms (Views: 7.2ms | ActiveRecord: 3.6ms | Allocations: 9680)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:10:40 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.7ms | Allocations: 259)
+  Rendered food/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 667)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 2584)
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 0.1ms | Allocations: 4632)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:11:03 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered food/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 668)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2585)
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 0.2ms | Allocations: 4619)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:11:12 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered food/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 667)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2601)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.1ms | Allocations: 4633)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:17:42 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.7ms | Allocations: 259)
+  Rendered food/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 668)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 2585)
+Completed 200 OK in 34ms (Views: 8.3ms | ActiveRecord: 15.4ms | Allocations: 7839)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:18:46 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (3.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.7ms | Allocations: 259)
+  Rendered food/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 686)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 2603)
+Completed 200 OK in 19ms (Views: 11.0ms | ActiveRecord: 3.6ms | Allocations: 4633)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:19:33 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 1.4ms | Allocations: 259)
+  Rendered food/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 677)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2611)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 0.3ms | Allocations: 4644)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:20:38 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.7ms | Allocations: 259)
+  Rendered food/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 659)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2593)
+Completed 200 OK in 13ms (Views: 8.7ms | ActiveRecord: 0.3ms | Allocations: 4633)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:21:11 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (3.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered food/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 654)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2571)
+Completed 200 OK in 13ms (Views: 6.5ms | ActiveRecord: 3.7ms | Allocations: 4603)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:21:46 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.4ms | Allocations: 259)
+  Rendered food/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 655)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 2572)
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 0.2ms | Allocations: 4621)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:24:33 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 1.0ms | Allocations: 259)
+  Rendered food/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 698)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2623)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 0.2ms | Allocations: 4658)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:25:39 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.7ms | Allocations: 259)
+  Rendered food/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 687)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2621)
+Completed 200 OK in 12ms (Views: 8.1ms | ActiveRecord: 0.3ms | Allocations: 4659)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:25:48 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.2ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.6ms | Allocations: 98)
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/layouts/_carousel_recipe_cards.erb:34
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 9.9ms | Allocations: 1076)
+  Rendered food/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 1815)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 3543)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.4ms | Allocations: 4229)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:25:49 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered food/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 133)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1868)
+Completed 200 OK in 16ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 3053)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:26:02 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/layouts/_carousel_recipe_cards.erb:34
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 1.6ms | Allocations: 786)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1029)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2757)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.2ms | Allocations: 3308)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:26:13 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered food/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 135)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1863)
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 3037)
+
+
+Started GET "/food/vegetarian" for ::1 at 2021-12-13 14:26:22 +0000
+Processing by FoodController#vegetarian as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Vegetarian"]]
+  ↳ app/controllers/food_controller.rb:30:in `vegetarian'
+  Rendering layout layouts/application.html.erb
+  Rendering food/vegetarian.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered food/vegetarian.html.erb within layouts/application (Duration: 1.2ms | Allocations: 296)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2024)
+Completed 200 OK in 8ms (Views: 4.7ms | ActiveRecord: 0.2ms | Allocations: 3302)
+
+
+Started GET "/food/vegan" for ::1 at 2021-12-13 14:26:26 +0000
+Processing by FoodController#vegan as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Vegan"]]
+  ↳ app/controllers/food_controller.rb:24:in `vegan'
+  Rendering layout layouts/application.html.erb
+  Rendering food/vegan.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered food/vegan.html.erb within layouts/application (Duration: 1.6ms | Allocations: 425)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 2153)
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 0.2ms | Allocations: 3406)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:26:33 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered food/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 134)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1879)
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.3ms | Allocations: 3050)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:26:55 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 1.0ms | Allocations: 260)
+  Rendered food/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 677)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 2594)
+Completed 200 OK in 26ms (Views: 10.4ms | ActiveRecord: 0.3ms | Allocations: 4633)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:27:10 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.7ms | Allocations: 259)
+  Rendered food/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2594)
+Completed 200 OK in 17ms (Views: 8.1ms | ActiveRecord: 0.2ms | Allocations: 4638)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:32:01 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered food/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 683)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2600)
+Completed 200 OK in 10ms (Views: 7.2ms | ActiveRecord: 0.2ms | Allocations: 4632)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:33:37 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 1.0ms | Allocations: 259)
+  Rendered food/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 2604)
+Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 0.2ms | Allocations: 4650)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:33:51 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered food/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 669)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2603)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.2ms | Allocations: 4633)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:34:13 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.2ms | Allocations: 60)
+  Rendered food/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 133)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 1862)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.2ms | Allocations: 3031)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:34:15 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered food/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 133)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1861)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.1ms | Allocations: 3045)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:34:19 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.7ms | Allocations: 98)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/layouts/_carousel_recipe_cards.erb:34
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 3.3ms | Allocations: 1075)
+  Rendered food/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1814)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 3542)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.3ms | Allocations: 4220)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:34:20 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.2ms | Allocations: 60)
+  Rendered food/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 135)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 1883)
+Completed 200 OK in 9ms (Views: 4.3ms | ActiveRecord: 0.2ms | Allocations: 3073)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:34:32 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered food/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 674)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2605)
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 0.2ms | Allocations: 4659)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:34:40 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered food/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 673)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2597)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 0.3ms | Allocations: 4635)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:34:46 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.8ms | Allocations: 259)
+  Rendered food/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 671)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2588)
+Completed 200 OK in 13ms (Views: 8.9ms | ActiveRecord: 0.3ms | Allocations: 4620)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:34:53 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered food/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 672)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2606)
+Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 0.3ms | Allocations: 4652)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:35:00 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.2ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/layouts/_carousel_recipe_cards.erb:34
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 3.4ms | Allocations: 1075)
+  Rendered food/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1814)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3542)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.4ms | Allocations: 4224)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:35:01 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered food/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 135)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1880)
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 3055)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:36:28 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered food/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 672)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2589)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.2ms | Allocations: 4632)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:37:01 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 1.5ms | Allocations: 259)
+  Rendered food/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 658)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 2592)
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 0.4ms | Allocations: 4639)
+
+
+Started GET "/food/vegetarian" for ::1 at 2021-12-13 14:37:14 +0000
+Processing by FoodController#vegetarian as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Vegetarian"]]
+  ↳ app/controllers/food_controller.rb:30:in `vegetarian'
+  Rendering layout layouts/application.html.erb
+  Rendering food/vegetarian.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered food/vegetarian.html.erb within layouts/application (Duration: 0.6ms | Allocations: 297)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 2026)
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.2ms | Allocations: 3302)
+
+
+Started GET "/food/vegan" for ::1 at 2021-12-13 14:37:17 +0000
+Processing by FoodController#vegan as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Vegan"]]
+  ↳ app/controllers/food_controller.rb:24:in `vegan'
+  Rendering layout layouts/application.html.erb
+  Rendering food/vegan.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered food/vegan.html.erb within layouts/application (Duration: 1.2ms | Allocations: 416)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2150)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.2ms | Allocations: 3404)
+
+
+Started GET "/food/vegetarian" for ::1 at 2021-12-13 14:40:19 +0000
+Processing by FoodController#vegetarian as HTML
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Vegetarian"]]
+  ↳ app/controllers/food_controller.rb:30:in `vegetarian'
+  Rendering layout layouts/application.html.erb
+  Rendering food/vegetarian.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.2ms | Allocations: 81)
+  Rendered food/vegetarian.html.erb within layouts/application (Duration: 0.4ms | Allocations: 156)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1953)
+Completed 200 OK in 24ms (Views: 4.2ms | ActiveRecord: 7.3ms | Allocations: 8486)
+
+
+Started GET "/food/vegan" for ::1 at 2021-12-13 14:40:20 +0000
+Processing by FoodController#vegan as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Vegan"]]
+  ↳ app/controllers/food_controller.rb:24:in `vegan'
+  Rendering layout layouts/application.html.erb
+  Rendering food/vegan.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.2ms | Allocations: 60)
+  Rendered food/vegan.html.erb within layouts/application (Duration: 0.7ms | Allocations: 229)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1957)
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.2ms | Allocations: 3093)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:40:21 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.2ms | Allocations: 60)
+  Rendered food/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 135)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1863)
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.2ms | Allocations: 3037)
+
+
+Started GET "/food/vegan" for ::1 at 2021-12-13 14:40:21 +0000
+Processing by FoodController#vegan as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Vegan"]]
+  ↳ app/controllers/food_controller.rb:24:in `vegan'
+  Rendering layout layouts/application.html.erb
+  Rendering food/vegan.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered food/vegan.html.erb within layouts/application (Duration: 0.5ms | Allocations: 221)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1966)
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 0.2ms | Allocations: 3108)
+
+
+Started GET "/food/vegetarian" for ::1 at 2021-12-13 14:40:22 +0000
+Processing by FoodController#vegetarian as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Vegetarian"]]
+  ↳ app/controllers/food_controller.rb:30:in `vegetarian'
+  Rendering layout layouts/application.html.erb
+  Rendering food/vegetarian.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered food/vegetarian.html.erb within layouts/application (Duration: 0.3ms | Allocations: 129)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1858)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.2ms | Allocations: 3008)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:40:22 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.2ms | Allocations: 60)
+  Rendered food/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 132)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1866)
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 3042)
+
+
+Started GET "/food/vegan" for ::1 at 2021-12-13 14:40:23 +0000
+Processing by FoodController#vegan as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Vegan"]]
+  ↳ app/controllers/food_controller.rb:24:in `vegan'
+  Rendering layout layouts/application.html.erb
+  Rendering food/vegan.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered food/vegan.html.erb within layouts/application (Duration: 0.5ms | Allocations: 219)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1947)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 3078)
+
+
+Started GET "/food/vegetarian" for ::1 at 2021-12-13 14:40:24 +0000
+Processing by FoodController#vegetarian as HTML
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Vegetarian"]]
+  ↳ app/controllers/food_controller.rb:30:in `vegetarian'
+  Rendering layout layouts/application.html.erb
+  Rendering food/vegetarian.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered food/vegetarian.html.erb within layouts/application (Duration: 0.4ms | Allocations: 129)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1857)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.1ms | Allocations: 3003)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:40:24 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered food/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 131)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1859)
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 3043)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:40:25 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.2ms | Allocations: 60)
+  Rendered food/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 132)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1860)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.2ms | Allocations: 3038)
+
+
+Started GET "/food/vegetarian" for ::1 at 2021-12-13 14:40:25 +0000
+Processing by FoodController#vegetarian as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Vegetarian"]]
+  ↳ app/controllers/food_controller.rb:30:in `vegetarian'
+  Rendering layout layouts/application.html.erb
+  Rendering food/vegetarian.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered food/vegetarian.html.erb within layouts/application (Duration: 0.4ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1856)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.2ms | Allocations: 3010)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:40:26 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered food/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 132)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1860)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 3034)
+
+
+Started GET "/food/vegetarian" for ::1 at 2021-12-13 14:40:27 +0000
+Processing by FoodController#vegetarian as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Vegetarian"]]
+  ↳ app/controllers/food_controller.rb:30:in `vegetarian'
+  Rendering layout layouts/application.html.erb
+  Rendering food/vegetarian.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered food/vegetarian.html.erb within layouts/application (Duration: 0.6ms | Allocations: 129)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 1857)
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 0.2ms | Allocations: 3005)
+
+
+Started GET "/food/vegan" for ::1 at 2021-12-13 14:40:28 +0000
+Processing by FoodController#vegan as HTML
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Vegan"]]
+  ↳ app/controllers/food_controller.rb:24:in `vegan'
+  Rendering layout layouts/application.html.erb
+  Rendering food/vegan.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered food/vegan.html.erb within layouts/application (Duration: 1.0ms | Allocations: 221)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 1949)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.3ms | Allocations: 3092)
+
+
+Started GET "/food/vegetarian" for ::1 at 2021-12-13 14:40:28 +0000
+Processing by FoodController#vegetarian as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Vegetarian"]]
+  ↳ app/controllers/food_controller.rb:30:in `vegetarian'
+  Rendering layout layouts/application.html.erb
+  Rendering food/vegetarian.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.2ms | Allocations: 60)
+  Rendered food/vegetarian.html.erb within layouts/application (Duration: 0.4ms | Allocations: 129)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 1874)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.2ms | Allocations: 3031)
+
+
+Started GET "/food/show" for ::1 at 2021-12-13 14:40:29 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered food/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 132)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1860)
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 3049)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:40:41 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 98)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/layouts/_carousel_recipe_cards.erb:34
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 8.5ms | Allocations: 1076)
+  Rendered food/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 1827)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 3572)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.2ms | Allocations: 4264)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:41:12 +0000
+>>>>>>> main
 Processing by FoodController#index as HTML
   Rendering layout layouts/application.html.erb
   Rendering food/index.html.erb within layouts/application
   Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
   Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+<<<<<<< HEAD
   Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
   Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
   Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1976)
@@ -2352,11 +3124,87 @@ Completed 200 OK in 9ms (Views: 8.2ms | Allocations: 4523)
 
 
 Started GET "/food" for ::1 at 2021-12-14 01:00:12 +0000
+=======
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/layouts/_carousel_recipe_cards.erb:34
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 2.0ms | Allocations: 786)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1029)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 2757)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.3ms | Allocations: 3319)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:43:14 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 98)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/layouts/_carousel_recipe_cards.erb:34
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 16.4ms | Allocations: 5606)
+  Rendered food/index.html.erb within layouts/application (Duration: 19.6ms | Allocations: 6678)
+  Rendered layout layouts/application.html.erb (Duration: 27.5ms | Allocations: 8612)
+Completed 200 OK in 32ms (Views: 24.2ms | ActiveRecord: 5.5ms | Allocations: 10520)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:43:15 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.2ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/layouts/_carousel_recipe_cards.erb:34
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 2.9ms | Allocations: 786)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1029)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 2774)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.3ms | Allocations: 3329)
+
+
+Started GET "/food/meat" for ::1 at 2021-12-13 14:43:16 +0000
+Processing by FoodController#meat as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:37:in `meat'
+  Rendering layout layouts/application.html.erb
+  Rendering food/meat.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered food/meat.html.erb within layouts/application (Duration: 0.8ms | Allocations: 327)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2056)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.2ms | Allocations: 3381)
+
+
+Started GET "/food/vegetarian" for ::1 at 2021-12-13 14:43:21 +0000
+Processing by FoodController#vegetarian as HTML
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Vegetarian"]]
+  ↳ app/controllers/food_controller.rb:30:in `vegetarian'
+  Rendering layout layouts/application.html.erb
+  Rendering food/vegetarian.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered food/vegetarian.html.erb within layouts/application (Duration: 0.6ms | Allocations: 298)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 2042)
+Completed 200 OK in 14ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 3331)
+
+
+Started GET "/food/meat" for ::1 at 2021-12-13 14:43:23 +0000
+Processing by FoodController#meat as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:37:in `meat'
+  Rendering layout layouts/application.html.erb
+  Rendering food/meat.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.2ms | Allocations: 60)
+  Rendered food/meat.html.erb within layouts/application (Duration: 0.4ms | Allocations: 132)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1860)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.2ms | Allocations: 3034)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:43:24 +0000
+>>>>>>> main
 Processing by FoodController#index as HTML
   Rendering layout layouts/application.html.erb
   Rendering food/index.html.erb within layouts/application
   Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
   Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+<<<<<<< HEAD
   Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
   Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
   Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1978)
@@ -2436,14 +3284,122 @@ Completed 200 OK in 9ms (Views: 8.4ms | Allocations: 4548)
 
 
 Started GET "/food" for ::1 at 2021-12-14 01:02:59 +0000
+=======
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/layouts/_carousel_recipe_cards.erb:34
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 1.7ms | Allocations: 786)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1029)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 2757)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.2ms | Allocations: 3310)
+
+
+Started GET "/food/meat" for ::1 at 2021-12-13 14:43:27 +0000
+Processing by FoodController#meat as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:37:in `meat'
+  Rendering layout layouts/application.html.erb
+  Rendering food/meat.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered food/meat.html.erb within layouts/application (Duration: 0.3ms | Allocations: 131)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 1859)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.2ms | Allocations: 3038)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:43:39 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.2ms | Allocations: 60)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/layouts/_carousel_recipe_cards.erb:34
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 2.2ms | Allocations: 786)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1029)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2757)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.3ms | Allocations: 3318)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:43:57 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.3ms | Allocations: 81)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/layouts/_carousel_recipe_cards.erb:34
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 16.1ms | Allocations: 5314)
+  Rendered food/index.html.erb within layouts/application (Duration: 16.9ms | Allocations: 5582)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 7371)
+Completed 200 OK in 26ms (Views: 19.3ms | ActiveRecord: 4.7ms | Allocations: 8561)
+
+
+Started GET "/food/meat" for ::1 at 2021-12-13 14:43:59 +0000
+Processing by FoodController#meat as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:33:in `meat'
+  Rendering layout layouts/application.html.erb
+  Rendering food/meat.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.2ms | Allocations: 60)
+  Rendered food/meat.html.erb within layouts/application (Duration: 0.5ms | Allocations: 135)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 1879)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.2ms | Allocations: 3089)
+
+
+Started GET "/food/vegetarian" for ::1 at 2021-12-13 14:44:00 +0000
+Processing by FoodController#vegetarian as HTML
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Vegetarian"]]
+  ↳ app/controllers/food_controller.rb:26:in `vegetarian'
+  Rendering layout layouts/application.html.erb
+  Rendering food/vegetarian.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered food/vegetarian.html.erb within layouts/application (Duration: 0.3ms | Allocations: 129)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1857)
+Completed 200 OK in 10ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 3006)
+
+
+Started GET "/food/vegan" for ::1 at 2021-12-13 14:44:00 +0000
+Processing by FoodController#vegan as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Vegan"]]
+  ↳ app/controllers/food_controller.rb:20:in `vegan'
+  Rendering layout layouts/application.html.erb
+  Rendering food/vegan.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered food/vegan.html.erb within layouts/application (Duration: 1.1ms | Allocations: 432)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2167)
+Completed 200 OK in 14ms (Views: 4.0ms | ActiveRecord: 0.2ms | Allocations: 3431)
+
+
+Started GET "/food/meat" for ::1 at 2021-12-13 14:44:01 +0000
+Processing by FoodController#meat as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."dietary_pref" = $1[0m  [["dietary_pref", "Meat"]]
+  ↳ app/controllers/food_controller.rb:33:in `meat'
+  Rendering layout layouts/application.html.erb
+  Rendering food/meat.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
+  Rendered food/meat.html.erb within layouts/application (Duration: 0.4ms | Allocations: 132)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1860)
+Completed 200 OK in 9ms (Views: 4.1ms | ActiveRecord: 0.2ms | Allocations: 3029)
+
+
+Started GET "/food" for ::1 at 2021-12-13 14:44:08 +0000
+>>>>>>> main
 Processing by FoodController#index as HTML
   Rendering layout layouts/application.html.erb
   Rendering food/index.html.erb within layouts/application
   Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 60)
   Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+<<<<<<< HEAD
   Rendered layouts/_carousel_recipe_cards.erb (Duration: 0.0ms | Allocations: 5)
   Rendered food/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
   Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1977)
 Completed 200 OK in 4ms (Views: 3.5ms | Allocations: 2468)
+=======
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/layouts/_carousel_recipe_cards.erb:34
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 2.2ms | Allocations: 786)
+  Rendered food/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1029)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2757)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.3ms | Allocations: 3308)
+>>>>>>> main
 
 

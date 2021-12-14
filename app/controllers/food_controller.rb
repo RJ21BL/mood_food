@@ -1,4 +1,5 @@
 class FoodController < ApplicationController
+
   def new
     @food = Food.new
   end
@@ -12,9 +13,25 @@ class FoodController < ApplicationController
   end
 
   def show
+  end 
+
+  def vegan
+    @vegan = Food.where(dietary_pref: 'Vegan')
+    @vegans = @vegan[rand(@vegan.length)]
+    @vegan_image = @vegans.image_name(@vegans.name)
+  end 
+
+  def vegetarian
+    @vegetarian = Food.where(dietary_pref: 'Vegetarian')
+    @vegetarians = @vegetarian[rand(@vegetarian.length)]
+    @vegetarian_image = @vegetarians.image_name(@vegetarians.name)
+  end 
+
+  def meat
     @foods = Food.all
-     rand_dom = rand(1...4)
-    @food = @foods[rand_dom]
+    @meat = Food.where(dietary_pref: 'Meat')
+    @meats = @meat[rand(@meat.length)]
+    @meat_image = @meats.image_name(@meats.name)
   end 
 
 private
