@@ -16,11 +16,14 @@
       <a class="nav-item nav-link active" href="/food">Home <span class="sr-only">(current)</span></a> </li>
       <li><a class="nav-item nav-link active" href="#">About Us</a></li>
      <li> <a class="nav-item nav-link active" href="#">Menus</a></li>
-     <li> <a class="nav-item nav-link active" href="#">Random Food Generator</a></li>
+     <li> <a class="nav-item nav-link active" href="/food/meat">Random Food Generator</a></li>
+     <% if current_user != nil %>
+     <li> <a class="nav-item nav-link active" href="/users/show"><%= current_user.first_name + "'s"+" Profile" %></a></li>
+     <% end %>
       
   </ul>
     <form class="form-inline my-2 my-lg-0 mx-auto">
-        <%= form_tag "/users", method: "GET" do %>
+        <%= form_tag "#search", method: "GET" do %>
         <div style="color:white;"> Search for recipe
             <%= text_field_tag :search_by_recipe, params[:search_by_recipe] %>
             <button class="btn btn-outline-success" type="submit" style="color: white">Search</button>
@@ -31,9 +34,12 @@
 
 
 <div class="container-fluid" style="background-color:white; color:black; font-size:20px; ">
-    
+    <% if current_user == nil %>
     <a href="login">Login</a> |
     <a href="/users/new">Register</a>  
+    <% else %>
+    <a href="/logout">Log Out</a> |
+    <% end %>
     <br>
 </div>
    

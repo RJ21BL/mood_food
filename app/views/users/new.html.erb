@@ -76,6 +76,16 @@
      <%= f.label :gender_female, 'female' %>
      <%= f.radio_button :gender, 'female' %> <br />
    </div>
+
+   <div class="form-group">
+     <%= f.label :Dietary_Preference %> <br />
+     <%= f.label :meat, 'Meat' %>
+     <%= f.radio_button :diet_pref, 'Meat' %>
+     <%= f.label :vegan, 'Vegan' %>
+     <%= f.radio_button :diet_pref, 'Vegan' %> 
+     <%= f.label :vegetarian, 'Vegetarian' %>
+     <%= f.radio_button :diet_pref, 'Vegetarian'%> <br />
+   </div>
  
      <br>
      <div class="field">
