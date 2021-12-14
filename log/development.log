@@ -3403,3 +3403,397 @@ Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.3ms | Allocations: 3308)
 >>>>>>> main
 
 
+Started GET "/food" for ::1 at 2021-12-14 10:19:01 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.6ms | Allocations: 333)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.2ms | Allocations: 95)
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 1.5ms | Allocations: 1677)
+  Rendered food/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 3037)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3116)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms | Allocations: 6921)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <style>
+#container {
+    align-items: stretch;
+  }
+</style>
+
+<center>
+<div class="container my-4" style="align-items: stretch;">
+
+<hr class="mb-5" />
+
+<!--Carousel Wrapper-->
+<div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+<!--Controls-->
+<div class="controls-top">
+<a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
+<a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fas fa-chevron-right"></i></a>
+</div>
+<!--/.Controls-->
+
+<!--Indicators-->
+<ol class="carousel-indicators">
+<li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+<li data-target="#multi-item-example" data-slide-to="1"></li>
+
+</ol>
+<!--/.Indicators-->
+
+<!--Slides-->
+<div class="carousel-inner" role="listbox">
+
+<!--First slide-->
+        <% @foods.each do |item| %>
+          <div class="carousel-item active">
+           <div class="row"> 
+            <div class="col-md-4" style="float:left">
+              <div class="card mb-2">
+                <img class="card-img-top"  src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title"><%=item.name%></h4>
+                  <p class="card-text"> <%=item.description%></p>
+                  <a class="btn btn-primary">Recipe</a>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="col-md-4" style="float:left">
+              <div class="card mb-2">
+                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a class="btn btn-primary">Button</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4" style="float:left">
+              <div class="card mb-2">
+                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a class="btn btn-primary">Button</a>
+                </div>
+              </div>
+            </div>
+           </div>
+          </div>
+          <!--/.First slide-->
+
+          <!--Second slide-->
+          <div class="carousel-item">
+           <div class="row">
+            <div class="col-md-4" style="float:left">
+              <div class="card mb-2">
+                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a class="btn btn-primary">Button</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4" style="float:left">
+              <div class="card mb-2">
+                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a class="btn btn-primary">Button</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4" style="float:left">
+              <div class="card mb-2">
+                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a class="btn btn-primary">Button</a>
+                </div>
+              </div>
+            </div>
+           </div>
+          </div>
+          <!--/.Second slide-->
+
+
+          
+        </div>
+        <!--/.Slides-->
+          </div>
+      </div>
+      <!--/.Carousel Wrapper-->
+    </center>
+
+
+
+
+    
+):
+1:    <style>
+2:    #container {
+3:        align-items: stretch;
+4:      }
+5:    </style>
+6:    
+7:    <center>
+8:    <div class="container my-4" style="align-items: stretch;">
+9:    
+10:    <hr class="mb-5" />
+11:    
+12:    <!--Carousel Wrapper-->
+13:    <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+14:    
+15:    <!--Controls-->
+16:    <div class="controls-top">
+17:    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
+18:    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fas fa-chevron-right"></i></a>
+19:    </div>
+20:    <!--/.Controls-->
+21:    
+22:    <!--Indicators-->
+23:    <ol class="carousel-indicators">
+24:    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+25:    <li data-target="#multi-item-example" data-slide-to="1"></li>
+26:    
+27:    </ol>
+28:    <!--/.Indicators-->
+29:    
+30:    <!--Slides-->
+31:    <div class="carousel-inner" role="listbox">
+32:    
+33:    <!--First slide-->
+34:            <% @foods.each do |item| %>
+35:              <div class="carousel-item active">
+36:               <div class="row"> 
+37:                <div class="col-md-4" style="float:left">
+38:                  <div class="card mb-2">
+39:                    <img class="card-img-top"  src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+40:                    <div class="card-body">
+41:                      <h4 class="card-title"><%=item.name%></h4>
+42:                      <p class="card-text"> <%=item.description%></p>
+43:                      <a class="btn btn-primary">Recipe</a>
+44:                    </div>
+45:                  </div>
+46:                </div>
+47:                
+48:    
+49:                <div class="col-md-4" style="float:left">
+50:                  <div class="card mb-2">
+51:                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+52:                    <div class="card-body">
+53:                      <h4 class="card-title">Card title</h4>
+54:                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+55:                        card's content.</p>
+56:                      <a class="btn btn-primary">Button</a>
+57:                    </div>
+58:                  </div>
+59:                </div>
+60:    
+61:                <div class="col-md-4" style="float:left">
+62:                  <div class="card mb-2">
+63:                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+64:                    <div class="card-body">
+65:                      <h4 class="card-title">Card title</h4>
+66:                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+67:                        card's content.</p>
+68:                      <a class="btn btn-primary">Button</a>
+69:                    </div>
+70:                  </div>
+71:                </div>
+72:               </div>
+73:              </div>
+74:              <!--/.First slide-->
+75:    
+76:              <!--Second slide-->
+77:              <div class="carousel-item">
+78:               <div class="row">
+79:                <div class="col-md-4" style="float:left">
+80:                  <div class="card mb-2">
+81:                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+82:                    <div class="card-body">
+83:                      <h4 class="card-title">Card title</h4>
+84:                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+85:                        card's content.</p>
+86:                      <a class="btn btn-primary">Button</a>
+87:                    </div>
+88:                  </div>
+89:                </div>
+90:    
+91:                <div class="col-md-4" style="float:left">
+92:                  <div class="card mb-2">
+93:                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg" alt="Card image cap">
+94:                    <div class="card-body">
+95:                      <h4 class="card-title">Card title</h4>
+96:                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+97:                        card's content.</p>
+98:                      <a class="btn btn-primary">Button</a>
+99:                    </div>
+100:                  </div>
+101:                </div>
+102:    
+103:                <div class="col-md-4" style="float:left">
+104:                  <div class="card mb-2">
+105:                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg" alt="Card image cap">
+106:                    <div class="card-body">
+107:                      <h4 class="card-title">Card title</h4>
+108:                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+109:                        card's content.</p>
+110:                      <a class="btn btn-primary">Button</a>
+111:                    </div>
+112:                  </div>
+113:                </div>
+114:               </div>
+115:              </div>
+116:              <!--/.Second slide-->
+117:    
+118:    
+119:              
+120:            </div>
+121:            <!--/.Slides-->
+122:              </div>
+123:          </div>
+124:          <!--/.Carousel Wrapper-->
+125:        </center>
+126:    
+127:    
+128:    
+129:    
+130:        
+  
+app/views/layouts/_carousel_recipe_cards.erb:132: syntax error, unexpected end-of-input, expecting `end'
+app/views/layouts/_carousel_recipe_cards.erb:132: syntax error, unexpected end-of-input, expecting `end'
+app/views/layouts/_carousel_recipe_cards.erb:132: syntax error, unexpected end-of-input, expecting `end'
+app/views/layouts/_carousel_recipe_cards.erb:132: syntax error, unexpected end-of-input, expecting `end'
+app/views/layouts/_carousel_recipe_cards.erb:132: syntax error, unexpected end-of-input, expecting `end'
+app/views/layouts/_carousel_recipe_cards.erb:132: syntax error, unexpected end-of-input, expecting `end'
+app/views/food/index.html.erb:29
+Started GET "/food" for ::1 at 2021-12-14 10:20:15 +0000
+Processing by FoodController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 2.9ms | Allocations: 248)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.3ms | Allocations: 96)
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/layouts/_carousel_recipe_cards.erb:34
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 16.9ms | Allocations: 6594)
+  Rendered food/index.html.erb within layouts/application (Duration: 22.3ms | Allocations: 7664)
+  Rendered layout layouts/application.html.erb (Duration: 37.9ms | Allocations: 12383)
+Completed 200 OK in 42ms (Views: 35.6ms | ActiveRecord: 4.6ms | Allocations: 13858)
+
+
+Started GET "/login" for ::1 at 2021-12-14 10:20:34 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 716)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 2483)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 3681)
+
+
+Started GET "/users/new" for ::1 at 2021-12-14 10:20:36 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.2ms | Allocations: 81)
+  Rendered users/new.html.erb within layouts/application (Duration: 14.4ms | Allocations: 6168)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 7935)
+Completed 200 OK in 47ms (Views: 18.6ms | ActiveRecord: 18.8ms | Allocations: 13676)
+
+
+Started GET "/food/show" for ::1 at 2021-12-14 10:20:45 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered food/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1703)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1772)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2443)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    13:     <div >
+    14: 
+    15:     <div style="color: white;">
+    16:         <p>Dish: <%= @food.name %></p> 
+    17:         <p>dietary preference: <%= @food.dietary_pref %></p> 
+    18:         <p>ingridents: </p>
+    19:         <% @food.ingredients.each_line do |ing| %>
+  
+app/views/food/show.html.erb:16
+Started GET "/food/show" for ::1 at 2021-12-14 10:20:52 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered food/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1377)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 1445)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1975)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    13:     <div >
+    14: 
+    15:     <div style="color: white;">
+    16:         <p>Dish: <%= @food.name %></p> 
+    17:         <p>dietary preference: <%= @food.dietary_pref %></p> 
+    18:         <p>ingridents: </p>
+    19:         <% @food.ingredients.each_line do |ing| %>
+  
+app/views/food/show.html.erb:16
+Started GET "/food?search_by_recipe=Food" for ::1 at 2021-12-14 10:22:16 +0000
+Processing by FoodController#index as HTML
+  Parameters: {"search_by_recipe"=>"Food"}
+  Rendering layout layouts/application.html.erb
+  Rendering food/index.html.erb within layouts/application
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered layouts/_carousel_images.html.erb (Duration: 0.0ms | Allocations: 5)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/layouts/_carousel_recipe_cards.erb:34
+  Rendered layouts/_carousel_recipe_cards.erb (Duration: 2.1ms | Allocations: 792)
+  Rendered food/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1036)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 2782)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.3ms | Allocations: 3367)
+
+
+Started GET "/food/show" for ::1 at 2021-12-14 10:22:32 +0000
+Processing by FoodController#show as HTML
+  Parameters: {"id"=>"show"}
+  Rendering layout layouts/application.html.erb
+  Rendering food/show.html.erb within layouts/application
+  Rendered food/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1377)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1445)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1977)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    13:     <div >
+    14: 
+    15:     <div style="color: white;">
+    16:         <p>Dish: <%= @food.name %></p> 
+    17:         <p>dietary preference: <%= @food.dietary_pref %></p> 
+    18:         <p>ingridents: </p>
+    19:         <% @food.ingredients.each_line do |ing| %>
+  
+app/views/food/show.html.erb:16
