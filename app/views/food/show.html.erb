@@ -24,15 +24,16 @@
        
         <p>cooking_time: <%= @food.cooking_time %></p>
         <p>allergies: <%= @food.allergies.join %></p> 
-        <p>cooking_instruction: <% @food.cooking_instructions.split(/[,.]/).each do |l| %></p> 
-          <ul> <li> <%= l.capitalize %> </li> </ul> 
+        <p>cooking_instruction: <% @food.cooking_instructions.each_line do |instruction| %></p> 
+          <p>  <ul>
+           <li> <%= instruction %> </li>
+          </ul> </p>
           <% end %>
-         
-         
-      
+
         
     
     </div>
+    <%= render "layouts/social_media" %>
    </body>
 </html>
 

@@ -1,0 +1,15 @@
+var foodId = '<%= @food.id%>'
+
+function toggleLikeButton(foodId, favoritedFood) {
+  let likeButton = document.querySelector(`.like-icon[data-id='${foodId}']`)
+  likeButton.classList.toggle('red');
+  if (likeButton.classList.contains('red')) {
+    const favoriteList = document.querySelector('.favorites');
+    favoriteList.insertAdjacentHTML('beforeend', favoritedFood)
+  }
+  else {
+    document.querySelector(`.favorite[data-id='${foodId}']`).remove()
+  }
+}
+
+toggleLikeButton(cocktailId, '<%= j render "foods/food", food: @food%>');

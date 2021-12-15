@@ -1,7 +1,7 @@
 puts 'Seeding...'
 
 Food.create([{
-  name: 'Chicken and sausage traybake with harissa, mushrooms and chickpeas',
+  name: 'Chicken and sausage traybake with harissa mushrooms and chickpeas',
   dietary_pref: 'Meat', 
   ingredients: '2 leeks, thickly sliced (15mm/⅝in slices).
   250g/9oz chestnut mushrooms, halved.
@@ -173,7 +173,7 @@ Food.create([{
  
  },
  {
-   name: 'Radicchio, chestnut and blue cheese salad',
+   name: 'Radicchio chestnut and blue cheese salad',
    dietary_pref: 'Vegetarian', 
    ingredients: '1 lime, juice only
    1 orange, juice only

@@ -1,4 +1,5 @@
 class FoodController < ApplicationController
+  before_action :authenticate_user!, only: :toggle_favorite
 
   def new
     @food = Food.new
@@ -10,19 +11,72 @@ class FoodController < ApplicationController
 
   def index 
     @foods = Food.all
+    @foods[1]
   end
 
   def show
-    p @foods = Food.all
-    "+++"
-     rand_dom = rand(1...4)
-     "+++"
-    @food = @foods[rand_dom]
-    
+  end 
+
+  def vegan
+    @vegan = Food.where(dietary_pref: 'Vegan')
+    @vegans = @vegan[rand(@vegan.length)]
+    @vegan_image = @vegans.image_name(@vegans.name)
+  end
+
+  def vegan_dishes
+    @vegan_list = Food.where(dietary_pref: 'Vegan')
+  end
+
+  def vegan_recipes
+    @vegan_list = Food.where(dietary_pref: 'Vegan')
+  end
+
+  def vegetarian
+    @vegetarian = Food.where(dietary_pref: 'Vegetarian')
+    @vegetarians = @vegetarian[rand(@vegetarian.length)]
+    @vegetarian_image = @vegetarians.image_name(@vegetarians.name)
+  end 
+
+  def vegetarian_dishes
+    @vegetarian_list = Food.where(dietary_pref: 'Vegetarian')
+  end
+
+  def vegetarian_recipes
+    @vegetarian_list = Food.where(dietary_pref: 'Vegetarian')
+  end
+
+  def meat
+    @foods = Food.all
+    @meat = Food.where(dietary_pref: 'Meat')
+    @meats = @meat[rand(@meat.length)]
+    @meat_image = @meats.image_name(@meats.name)
+  end
+
+  def meat_dishes
+    @meat_list = Food.where(dietary_pref: 'Meat')
+  end
+
+  def meat_recipes
+    @meat_list = Food.where(dietary_pref: 'Meat')
+  end
+
+  def search
+    if params[:search_by_recipe] != "" 
+      @recipe_searched = Food.where("name LIKE ?", params[:search_by_recipe])
+      @search_option = 1
+      if @recipe_searched == []
+        @recipe_searched = Food.all
+        @search_option = 0
+      end
+    end 
+  end 
+
+  def toggle_favorite
+    @food = Food.find_by(id: params[:id])
+    current_user.favorited?(@food) ? current_user.unfavorite(@food) : current_user.favorite(@food)
   end 
 
 private
-
   def food_params
     params.require(:food).permit(:name, :dietary_pref, :ingredients, :cooking_time, :allergies, :cooking_instructions)
   end

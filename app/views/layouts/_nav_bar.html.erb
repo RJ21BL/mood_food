@@ -1,51 +1,52 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">    
-<div class="navbar navbar-inverse" style="border: 2px solid #5c3971;">
-        <div class="container-fluid">
-        <img src="/mood_food_logo.jpeg" style="width:300x;height:200px" align="left">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="navbar-header">
-                        <button class="navbar-toggle" data-target="#mobile_menu" data-toggle="collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-                        <a href="/food" class="navbar-brand">Mood Food</a>
-                    </div>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#5C3971; color:white; font-size:20px;">
+    <a class="navbar-brand" href="/food">
+    <img src="/logo.png" width="200" height="80"  align="left">
+    </a>  
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-                    <div class="navbar-collapse collapse" id="mobile_menu">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="/food">Home</a></li>
-                            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="/about_us/show">Snails On Rails</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Welcome</a></li>
-                            <li><a href="#">Random Food Generator</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                        </ul>
-                        <ul class="nav navbar-nav">
-                            <li>
-                            <%= form_tag "/users", method: "GET" do %>
-                              <div style="color:black;">
-                              <%= text_field_tag :search_by_recipe, params[:search_by_recipe] %>
-                              <button class="btn btn-outline-success" type="submit" style="color: white">Search</button>
-                              </div>
-                            <% end %>
-                            </li>
-                        </ul>
 
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="/users/index"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
-                            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Login / Sign Up <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="login">Login</a></li>
-                                    <li><a href="/users/new">Sign Up</a></li>
-                                    <li><a href="logout">Sign Out</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav mr-auto">
+    <li>
+      <a class="nav-item nav-link active" href="/food">Home <span class="sr-only">(current)</span></a> </li>
+      <li><a class="nav-item nav-link active" href="/about_us/show">About Us</a></li>
+     <li> <a class="nav-item nav-link active" href="#menu">Menus</a></li>
+     <li> <a class="nav-item nav-link active" href="/food/meat-dishes">Meat dishes</a></li>
+     <li> <a class="nav-item nav-link active" href="/food/vegan-dishes">Vegetarian dishes</a></li>
+     <li> <a class="nav-item nav-link active" href="/food/vegetarian-dishes">Vegan dishes</a></li>
+     <li> <a class="nav-item nav-link active" href="/food/meat">Dish ideas</a></li>
+     <% if current_user != nil %>
+     <li> <a class="nav-item nav-link active" href="/users/show"><%= current_user.first_name + "'s"+" Profile" %></a></li>
+     <% end %>
+
+      
+  </ul>
+  <%= form_tag "/food/search", method: "GET" do %>
+    <%= label_tag :search_by_recipe %>
+      <div style="color:white;">
+        <%= text_field_tag :search_by_recipe, params[:search_by_recipe] %>
+        <button class="btn btn-outline-success" type="submit" style="color: white">Search</button>
+      </div>
+    <% end %>
+</nav>
+
+<div class="container-fluid" style="background-color:white; color:black; font-size:20px; ">
+    <% if current_user == nil %>
+    <a href="login">Login</a> |
+    <a href="/users/new">Register</a>  
+    <% else %>
+    <a href="/logout">Log Out</a> |
+    <% end %>
+    <br>
+    <br>
+</div>
+   
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

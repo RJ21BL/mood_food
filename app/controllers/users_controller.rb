@@ -14,14 +14,12 @@ class UsersController < ApplicationController
   end
 
   def index 
-    if params[:search_by_recipe] != "" 
-      @recipe_searched = Food.where("lower(name) = ?", params[:search_by_recipe].downcase)
-    end
+    
   end 
 
   private
 
   def user_params
-   params.require(:user).permit(:first_name, :surname, :email, :password, :password_confirmation, :gender, :dob)
+   params.require(:user).permit(:first_name, :surname, :email, :password, :password_confirmation, :gender, :dob, :diet_pref)
   end
 end
