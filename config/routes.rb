@@ -8,11 +8,16 @@ Rails.application.routes.draw do
   get '/food/vegetarian'
   get '/food/meat'
   get '/food/search'
+  get '/food/meat-dishes'
+  get '/food/vegan-dishes'
+  get '/food/vegetarian-dishes'
+  get '/food/vegan-recipes'
+  get '/food/vegetarian-recipes'
+  get '/food/meat-recipes'
 
   resources :food
   resources :users
   resources :sessions
-
   resources :food, only: :meat do
     member do
       post 'toggle_favorite', to: "food#toggle_favorite"
@@ -20,3 +25,4 @@ Rails.application.routes.draw do
   end
 
 end
+

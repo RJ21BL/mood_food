@@ -22,13 +22,13 @@
   <div class="card-header">
     <ul class="nav nav-tabs card-header-tabs">
       <li class="nav-item">
-        <a class="nav-link active" href="/food/meat-dishes">Meat</a>
+        <a class="nav-link" href="/food/meat-dishes">Meat</a>
         <div class="card-body">
     
   </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/food/vegetarian-dishes">Vegetarian</a>
+        <a class="nav-link active" href="/food/vegetarian-dishes">Vegetarian</a>
         <div class="card-body">
     
   </div>
@@ -42,24 +42,21 @@
     </ul>
   </div>
   <div class="card-body" >
-  <img class="card-img-top" style="width: 60%;" src= <%=@meat_image%> alt="Card image cap">
+  <% @vegetarian_list.each do |dish| %>
+  <img class="card-img-top" style="width: 60%;" src= <%= dish.image_name(dish.name)%> alt="Card image cap">
   <hr>  
-  <h2 class="card-title"><%= @meats.name %></h2>
-    <p class="card-text"><%= @meats.description %></p>
-    <p class="card-text"><%= @meats.ingredients %></p>
-    <p class="card-text"> Step 1: <%= @meats.cooking_instructions[0]["Step 1"] %></p>
-    <p class="card-text"> Step 2: <%= @meats.cooking_instructions[1]["Step 2"] %></p>
-    <p class="card-text"> Step 3: <%= @meats.cooking_instructions[2]["Step 3"] %></p>
+  <h2 class="card-title"><%= dish.name %></h2>
+    <p class="card-text"><%= dish.description %></p>
+        <a class="nav-link" href="/food/vegetarian-recipes">Get recipe!</a>
+
+    <% end %>
   </div>
 </div>
 
-<%= link_to "like", toggle_favorite_food_path(@meats), remote: true, method: :post %>
 
 
-
-
-</center>
 <%= render "layouts/social_media" %>
+</center>
    </body>
 </html>
 
