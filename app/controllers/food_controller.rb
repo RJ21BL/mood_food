@@ -76,6 +76,10 @@ class FoodController < ApplicationController
   #   current_user.favorited?(@food) ? current_user.unfavorite(@food) : current_user.favorite(@food)
   # end 
 
+  def recipe
+    @food = Food.find(params[:id])
+  end 
+
 private
   def food_params
     params.require(:food).permit(:name, :dietary_pref, :ingredients, :cooking_time, :allergies, :cooking_instructions)

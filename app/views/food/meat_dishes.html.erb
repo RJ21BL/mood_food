@@ -47,7 +47,7 @@
   <hr>  
   <h2 class="card-title"><%= dish.name %></h2>
     <p class="card-text"><%= dish.description %></p>
-    <a class="nav-link" href="/food/meat-recipes">Get recipe!</a>
+    <%= link_to 'Get recipe!', food_path(dish.id) %>
     <% end %>
   </div>
 </div>
