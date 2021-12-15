@@ -16,6 +16,7 @@ class FoodController < ApplicationController
   def show
   end 
 
+
   def vegan
     @vegan = Food.where(dietary_pref: 'Vegan')
     @vegans = @vegan[rand(@vegan.length)]
@@ -76,8 +77,12 @@ class FoodController < ApplicationController
     @food = Food.find(params[:id])
   end 
 
+
 private
   def food_params
     params.require(:food).permit(:name, :dietary_pref, :ingredients, :cooking_time, :allergies, :cooking_instructions)
   end
+
+  def fav_params
+    params.require(:food).permit(:id)
 end
