@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   get '/food/vegetarian-recipes'
   get '/food/meat-recipes'
 
+  get '/recipe/:id', to: 'food#recipe', as: 'food'
+
   resources :food
   resources :users
   resources :sessions

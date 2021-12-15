@@ -70,6 +70,12 @@ class FoodController < ApplicationController
     end 
   end 
 
+ 
+
+  def recipe
+    @food = Food.find(params[:id])
+  end 
+
 private
   def food_params
     params.require(:food).permit(:name, :dietary_pref, :ingredients, :cooking_time, :allergies, :cooking_instructions)
