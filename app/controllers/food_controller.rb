@@ -37,18 +37,22 @@ class FoodController < ApplicationController
   end 
 
   def search
-    if params[:search_by_recipe] != ""
-      @recipe_searched = Food.where("lower(name) = ?", params[:search_by_recipe].downcase)
-    end
+    if params[:search_by_recipe] != "" 
+      @recipe_searched = Food.where("name LIKE ?", params[:search_by_recipe])
+      @search_option = 1
+      if @recipe_searched == []
+        @recipe_searched = Food.all
+        @search_option = 0
+      end
+    end 
   end 
 
   def toggle_favorite
     @food = Food.find_by(id: params[:id])
     current_user.favorited?(@food) ? current_user.unfavorite(@food) : current_user.favorite(@food)
-end 
+  end 
 
 private
-
   def food_params
     params.require(:food).permit(:name, :dietary_pref, :ingredients, :cooking_time, :allergies, :cooking_instructions)
   end

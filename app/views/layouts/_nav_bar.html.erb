@@ -24,16 +24,14 @@
 
       
   </ul>
-    <form class="form-inline my-2 my-lg-0 mx-auto">
-        <%= form_tag "#search", method: "GET" do %>
-        <div style="color:white;"> Search for recipe
-            <%= text_field_tag :search_by_recipe, params[:search_by_recipe] %>
-            <button class="btn btn-outline-success" type="submit" style="color: white">Search</button>
-        </div>
-        <% end %>
-    </form>
+  <%= form_tag "/food/search", method: "GET" do %>
+    <%= label_tag :search_by_recipe %>
+      <div style="color:white;">
+        <%= text_field_tag :search_by_recipe, params[:search_by_recipe] %>
+        <button class="btn btn-outline-success" type="submit" style="color: white">Search</button>
+      </div>
+    <% end %>
 </nav>
-
 
 <div class="container-fluid" style="background-color:white; color:black; font-size:20px; ">
     <% if current_user == nil %>

@@ -12,26 +12,23 @@
 <body>
 
   <%= render "layouts/nav_bar" %>
-
-<% if @recipe_searched == [] %>
-  <p> No Search Results </p>
-    <% else %> 
+<% if @search_option == 0 %>
+  <p> No Search Results, but here are our other recipes! </p>
+  <% end %> 
   <% @recipe_searched.each do |recipe| %>
     <div  class="container ">
       <div class ="row offset-2">
         <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 100rem;">
           <div class="card-body ">
-            <h3> Mood Food </h3>
-            <p>Recipe Name: <%= recipe.name %> </p>
+            <h3> <%= recipe.name %> </h3>
+            <img class="card-img-top" style="width: 60%;" src= <%= recipe.image_name(recipe.name)%> alt="Card image cap">
             <p>Dietary Preferences: <%= recipe.dietary_pref %> </p>
             <p>Cooking Time: <%= recipe.cooking_time %> </p>
-            <p>Cooking Instructions: <%= recipe.cooking_instruction %> </p>
-            <p>Ingrediants: <%= recipe.ingridents %> </p>
+            <p> Description: <%=recipe.description %> </p>
           </div>
         </div>
       </div>
     </div>
   <% end %>
-<% end %>
 </body>
 </html>
