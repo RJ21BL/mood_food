@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   get 'login', to: 'sessions#new', as: 'login'
   get 'sign_up', to: 'users#new', as: 'sign_up'
   get 'logout', to: 'sessions#destroy', as: 'logout'
+  
   root to: 'sessions#new'
+  
   get '/food/vegan'
   get '/food/vegetarian'
   get '/food/meat'
@@ -18,6 +20,7 @@ Rails.application.routes.draw do
   resources :food
   resources :users
   resources :sessions
+ resources :about_us
   resources :food, only: :meat do
     member do
       post 'toggle_favorite', to: "food#toggle_favorite"
