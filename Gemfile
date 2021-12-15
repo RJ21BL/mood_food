@@ -15,6 +15,7 @@ end
 group :development do   
   gem  'sqlite3' 
 end
+gem 'acts_as_favoritor'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets

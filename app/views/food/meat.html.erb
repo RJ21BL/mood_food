@@ -47,14 +47,19 @@
   <h2 class="card-title"><%= @meats.name %></h2>
     <p class="card-text"><%= @meats.description %></p>
     <p class="card-text"><%= @meats.ingredients %></p>
-    
+    <p class="card-text"> Step 1: <%= @meats.cooking_instructions[0]["Step 1"] %></p>
+    <p class="card-text"> Step 2: <%= @meats.cooking_instructions[1]["Step 2"] %></p>
+    <p class="card-text"> Step 3: <%= @meats.cooking_instructions[2]["Step 3"] %></p>
   </div>
 </div>
 
+<%= link_to "like", toggle_favorite_food_path(@meats), remote: true, method: :post %>
 
 
-<%= render "layouts/social_media" %>
+
+
 </center>
+<%= render "layouts/social_media" %>
    </body>
 </html>
 
