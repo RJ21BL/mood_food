@@ -39,6 +39,10 @@ class FoodController < ApplicationController
     @vegetarian_list = Food.where(dietary_pref: 'Vegetarian')
   end
 
+  def vegetarian_recipes
+    @vegetarian_list = Food.where(dietary_pref: 'Vegetarian')
+  end
+
   def meat
     @foods = Food.all
     @meat = Food.where(dietary_pref: 'Meat')

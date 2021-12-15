@@ -36,6 +36,7 @@
       <li class="nav-item">
         <a class="nav-link" href="/food/vegan-dishes">Vegan</a>
         <div class="card-body">
+        
    
   </div>
       </li>
@@ -43,12 +44,9 @@
   </div>
   <div class="card-body" >
   <% @vegetarian_list.each do |dish| %>
-  <img class="card-img-top" style="width: 60%;" src= <%= dish.image_name(dish.name)%> alt="Card image cap">
   <hr>  
   <h2 class="card-title"><%= dish.name %></h2>
-    <p class="card-text"><%= dish.description %></p>
-        <a class="nav-link" href="/food/vegetarian-recipes">Get recipe!</a>
-
+    <p class="card-text"><%= dish.ingredients %></p>
     <% end %>
   </div>
 </div>
