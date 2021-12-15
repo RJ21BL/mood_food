@@ -25,6 +25,10 @@ class FoodController < ApplicationController
     @vegan_list = Food.where(dietary_pref: 'Vegan')
   end
 
+  def vegan_recipes
+    @vegan_list = Food.where(dietary_pref: 'Vegan')
+  end
+
   def vegetarian
     @vegetarian = Food.where(dietary_pref: 'Vegetarian')
     @vegetarians = @vegetarian[rand(@vegetarian.length)]
