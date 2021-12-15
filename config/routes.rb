@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   get '/food/vegetarian'
   get '/food/meat'
   get '/food/search'
+  get '/food/meaty-meals'
+  get '/food/plant-power'
+  get '/food/vegetarian-life'
 
   resources :food
   resources :users

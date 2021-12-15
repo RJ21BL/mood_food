@@ -19,7 +19,11 @@ class FoodController < ApplicationController
     @vegan = Food.where(dietary_pref: 'Vegan')
     @vegans = @vegan[rand(@vegan.length)]
     @vegan_image = @vegans.image_name(@vegans.name)
-  end 
+  end
+
+  def plant_power
+    @vegan_list = Food.where(dietary_pref: 'Vegan')
+  end
 
   def vegetarian
     @vegetarian = Food.where(dietary_pref: 'Vegetarian')
@@ -27,12 +31,20 @@ class FoodController < ApplicationController
     @vegetarian_image = @vegetarians.image_name(@vegetarians.name)
   end 
 
+  def vegetarian_life
+    @vegetarian_list = Food.where(dietary_pref: 'Vegetarian')
+  end
+
   def meat
     @foods = Food.all
     @meat = Food.where(dietary_pref: 'Meat')
     @meats = @meat[rand(@meat.length)]
     @meat_image = @meats.image_name(@meats.name)
-  end 
+  end
+
+  def meaty_meals
+    @meat_list = Food.where(dietary_pref: 'Meat')
+  end
 
   def search
     if params[:search_by_recipe] != ""
