@@ -1,7 +1,7 @@
 puts 'Seeding...'
 
 Food.create([{
-  name: 'Chicken and sausage traybake with harissa mushrooms and chickpeas',
+  name: 'Chicken And Sausage Traybake With Harissa Mushrooms And Chickpeas',
   dietary_pref: 'Meat', 
   ingredients: '2 leeks, thickly sliced (15mm/⅝in slices).
   250g/9oz chestnut mushrooms, halved.
@@ -27,7 +27,7 @@ Food.create([{
   description: 'This warming traybake is a perfectly balanced all-in-one dinner, with sweet potatoes for carbs, and leeks for greens.'
  },
  {
-   name: 'Quick sausage Bolognese',
+   name: 'Quick Sausage Bolognese',
    dietary_pref: 'Meat', 
    ingredients: '4–6 good-quality sausages (300–400g/10½–14oz)
    1 tbsp olive oil
@@ -50,7 +50,7 @@ Food.create([{
  
  },
  {
-   name: 'Pea soup with pancetta',
+   name: 'Pea Soup With Pancetta',
    dietary_pref: 'Vegetarian', 
    ingredients: '1 litre/1¾ pints chicken stock
    500g/1lb 2oz frozen peas
@@ -67,7 +67,7 @@ Food.create([{
  
   },
   {
-    name: 'Vegan noodle soup',
+    name: 'Vegan Noodle Soup',
     dietary_pref: 'Vegan', 
     ingredients: '2 packs of noodle soup (dried or tinned)
     300g/10½oz dried ramen wheat noodles, soba or rice noodles
@@ -88,7 +88,7 @@ Food.create([{
   
   },
   {
-    name: 'Mary Berrys beef stew',
+    name: 'Mary Berrys Beef Stew',
     dietary_pref: 'Meat', 
     ingredients: '1 tbsp sunflower oil
     750g/1lb 10oz braising steak, cut into 2cm/¾in cubes
@@ -114,7 +114,7 @@ Food.create([{
  
  },
  {
-   name: 'Slow cooker vegetarian hotpot',
+   name: 'Slow Cooker Vegetarian Hotpot',
    dietary_pref: 'Vegetarian', 
    ingredients: '2 tbsp sunflower oil
    1 small butternut squash (approximately 800g/1lb 12oz), scrubbed, deseeded and chopped into chunks
@@ -143,7 +143,7 @@ Food.create([{
  
  },
  {
-   name: 'Broccoli pasta bake',
+   name: 'Broccoli Pasta Bake',
    dietary_pref: 'Vegetarian', 
    ingredients: '50g/1¾oz unsalted butter
    50g/1¾oz plain flour
@@ -173,7 +173,7 @@ Food.create([{
  
  },
  {
-   name: 'Radicchio chestnut and blue cheese salad',
+   name: 'Radicchio Chestnut And Blue Cheese Salad',
    dietary_pref: 'Vegetarian', 
    ingredients: '1 lime, juice only
    1 orange, juice only
@@ -190,7 +190,7 @@ Food.create([{
  
  },
  {
-   name: 'Vegan lasagne',
+   name: 'Vegan Lasagne',
    dietary_pref: 'Vegan', 
    ingredients: '4 tbsp extra virgin olive oil
    1 large onion, finely chopped
@@ -223,7 +223,7 @@ Food.create([{
  
  },
  {
-   name: 'Chickpea and cauliflower curry',
+   name: 'Chickpea And Cauliflower Curry',
    dietary_pref: 'Vegan', 
    ingredients: '1 tbsp sunflower or vegetable oil
    1 small onion, sliced
@@ -245,7 +245,7 @@ Food.create([{
  
  },
  {
-   name: 'Lighter creamy chicken pie',
+   name: 'Lighter Creamy Chicken Pie',
    dietary_pref: 'Meat', 
    ingredients: '1 tbsp sunflower oil
    3 boneless, skinless chicken breasts (around 500g/1lb 2oz), cut into roughly 2cm/¾in chunks
@@ -270,7 +270,7 @@ Food.create([{
  
  },
  {
-   name: 'Healthy fish pie',
+   name: 'Healthy Fish Pie',
    dietary_pref: 'Meat', 
    ingredients: '500g/1lb 2oz swede, peeled and chopped
    500g/1lb 2oz potatoes, peeled and chopped

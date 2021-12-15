@@ -10,6 +10,7 @@ class FoodController < ApplicationController
 
   def index 
     @foods = Food.all
+    @food = @foods.shuffle
   end
 
   def show
