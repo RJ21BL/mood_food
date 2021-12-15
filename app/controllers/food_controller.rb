@@ -71,10 +71,10 @@ class FoodController < ApplicationController
     end 
   end 
 
-  def toggle_favorite
-    @food = Food.find_by(id: params[:id])
-    current_user.favorited?(@food) ? current_user.unfavorite(@food) : current_user.favorite(@food)
-  end 
+  # def toggle_favorite
+  #   @food = Food.find_by(id: params[:id])
+  #   current_user.favorited?(@food) ? current_user.unfavorite(@food) : current_user.favorite(@food)
+  # end 
 
 private
   def food_params
