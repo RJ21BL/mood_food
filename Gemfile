@@ -8,13 +8,13 @@ gem 'orderly'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 
 # Use sqlite3 as the database for Active Record
-group :production do   
+# group :production do   
   gem 'pg' 
-end  
+# end  
 
-group :development do   
-  gem  'sqlite3' 
-end
+# group :development do   
+#   gem  'sqlite3' 
+# end
 gem 'acts_as_favoritor'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
