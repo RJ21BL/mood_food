@@ -21,7 +21,7 @@ class FoodController < ApplicationController
     @vegan_image = @vegans.image_name(@vegans.name)
   end
 
-  def plant_power
+  def vegan_dishes
     @vegan_list = Food.where(dietary_pref: 'Vegan')
   end
 
@@ -31,7 +31,7 @@ class FoodController < ApplicationController
     @vegetarian_image = @vegetarians.image_name(@vegetarians.name)
   end 
 
-  def vegetarian_life
+  def vegetarian_dishes
     @vegetarian_list = Food.where(dietary_pref: 'Vegetarian')
   end
 
@@ -42,7 +42,7 @@ class FoodController < ApplicationController
     @meat_image = @meats.image_name(@meats.name)
   end
 
-  def meaty_meals
+  def meat_dishes
     @meat_list = Food.where(dietary_pref: 'Meat')
   end
 
