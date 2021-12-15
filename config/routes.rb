@@ -21,11 +21,5 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions
  resources :about_us
-  resources :food, only: :meat do
-    member do
-      post 'toggle_favorite', to: "food#toggle_favorite"
-    end
-  end
-
 end
 
