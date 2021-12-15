@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/food/vegetarian-dishes'
   get '/food/vegan-recipes'
   get '/food/vegetarian-recipes'
+  get '/food/meat-recipes'
 
   resources :food
   resources :users

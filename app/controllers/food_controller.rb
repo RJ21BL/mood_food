@@ -54,6 +54,10 @@ class FoodController < ApplicationController
     @meat_list = Food.where(dietary_pref: 'Meat')
   end
 
+  def meat_recipes
+    @meat_list = Food.where(dietary_pref: 'Meat')
+  end
+
   def search
     if params[:search_by_recipe] != ""
       @recipe_searched = Food.where("lower(name) = ?", params[:search_by_recipe].downcase)
