@@ -1,4 +1,25 @@
 <%= render "layouts/nav_bar" %>
-<img class="card-img-top" style="width: 60%;" src= <%= @food.image_name(@food.name)%> alt="Card image cap">
-<%= @food.name %>
-<%= @food.description%>
+
+
+ <center>    
+        <div class="card ">
+          <div class="card-body ">
+            <h3> <%= @food.name %> </h3>
+            <img class="card-img-top" style="width: 60%;" src= <%= @food.image_name(@food.name)%> alt="Card image cap">
+            <p>  Description: <%= @food.description%> </p>
+            <p> Dietary Preferences: <%= @food.dietary_pref %> </p>
+            <p>  Cooking Time:  <%= @food.cooking_time %> mins</p>
+            <h5> Ingredients </h5>
+            <p><%= @food.ingredients %></p>
+            <h5> Cooking Instructions: </h5>
+            <p> <% @food.cooking_instructions.each do |x| %> 
+              <% x.each do |key, value|  %>
+                <%= key %> : <%= value%>
+              <% end %>
+              </p>
+              <% end %>
+          </div>
+        </div>
+
+  <%= render "layouts/social_media" %>
+</center>

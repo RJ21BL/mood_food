@@ -35,13 +35,26 @@
       </li>
     </ul>
   </div>
-  <div class="card-body">
+
+<div class="card-body" >
   <img class="card-img-top" style="width: 60%;" src= <%=@vegetarian_image%> alt="Card image cap">
   <hr>
     <h5 class="card-title"><%= @vegetarians.name %></h5>
     <p class="card-text"><%= @vegetarians.description %></p>
-  </div>
-</div>
+        <h5> Ingredients </h5>
+        <p class="card-text"><%= @vegetarians.ingredients %></p>
+        <h5> Cooking Instructions </h5>
+        <p class="card-text"> <% @vegetarians.cooking_instructions.each do |x| %>  
+          <% x.each do |key, value|  %>
+            <%= key %> : <%= value%>
+          <% end %>
+          </p>
+          <% end %>
+  </div>  
+
+
+
+
 <%= render "layouts/social_media" %>
 </center>
   </body>
