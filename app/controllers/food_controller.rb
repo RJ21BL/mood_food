@@ -1,5 +1,4 @@
 class FoodController < ApplicationController
-  before_action :authenticate_user!, only: :toggle_favorite
 
   def new
     @food = Food.new
@@ -11,7 +10,7 @@ class FoodController < ApplicationController
 
   def index 
     @foods = Food.all
-    @foods[1]
+    @food = @foods.shuffle
   end
 
   def show
@@ -71,10 +70,7 @@ class FoodController < ApplicationController
     end 
   end 
 
-  # def toggle_favorite
-  #   @food = Food.find_by(id: params[:id])
-  #   current_user.favorited?(@food) ? current_user.unfavorite(@food) : current_user.favorite(@food)
-  # end 
+ 
 
   def recipe
     @food = Food.find(params[:id])

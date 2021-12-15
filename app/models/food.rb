@@ -1,5 +1,5 @@
 class Food < ApplicationRecord
-  # acts_as_favoritable
+
 
 def image_name(name)
   @food_name = "#{name}"

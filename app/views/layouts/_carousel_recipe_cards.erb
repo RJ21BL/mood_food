@@ -5,114 +5,126 @@
 </style>
 
 <center>
-<div class="container my-4" style="align-items: stretch;" id="menu" >
+<div class="container my-4">
+     
 
-<hr class="mb-5" />
+      <!--Carousel Wrapper-->
+      <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
 
-<!--Carousel Wrapper-->
-<div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+        <!--Indicators-->
+        <ol class="carousel-indicators">
+          <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+          <li data-target="#multi-item-example" data-slide-to="1"></li>
 
-<!--Controls-->
-<div class="controls-top">
-<a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
-<a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fas fa-chevron-right"></i></a>
-</div>
-<!--/.Controls-->
+        </ol>
+        <!--/.Indicators-->
 
-<!--Indicators-->
-<ol class="carousel-indicators">
-<li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-<li data-target="#multi-item-example" data-slide-to="1"></li>
+        <!--Slides-->
+        <div class="carousel-inner" role="listbox">
 
-</ol>
-<!--/.Indicators-->
+          <!--First slide-->
+          <div class="carousel-item active">
 
-<!--Slides-->
-<div class="carousel-inner" role="listbox" >
-
-<!--First slide-->
-<div class="carousel-item active">
-<% @foods.each do |item| %>
-
-            <div class="col-md-4" style="float:left;">
+            <div class="col-md-3" style="float:left">
               <div class="card mb-2" style="border: 5px solid #5c3971;">
-                <img class="card-img-top" src="lasange.webp" alt="Card image cap">
+                <img class="card-img-top" src= <%= @food[0].image_name(@food[0].name) %> alt="Card image cap">
                 <div class="card-body">
-                  <h4 class="card-title"><%=item.name%></h4>
-                  <p class="card-text"> <%=item.description%></p>
-                  <a class="btn btn-primary">Recipe</a>
-                </div>
-              </div>
-            </div>
-            
-
-            <div class="col-md-4" style="float:left">
-              <div class="card mb-2" style="border: 5px solid #5c3971;">
-                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
-                <div class="card-body">
-                <h4 class="card-title"><%=item.name%></h4>
-                  <p class="card-text"> <%=item.description%></p>
-                  <a class="btn btn-primary">Recipe</a>
+                  <h4 class="card-title"><%= @food[0].name %></h4>
+                  <p class="card-text"><%= @food[0].description %></p>
+                  <a class="nav-link" href="/food/meat-recipes">Recipe</a>
                 </div>
               </div>
             </div>
 
-            <div class="col-md-4" style="float:left">
+            <div class="col-md-3" style="float:left">
               <div class="card mb-2" style="border: 5px solid #5c3971;">
-                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+                <img class="card-img-top" src=<%= @food[1].image_name(@food[1].name) %> alt="Card image cap">
                 <div class="card-body">
-                <h4 class="card-title"><%=item.name%></h4>
-                <p class="card-text"> <%=item.description%></p>
-                <a class="btn btn-primary">Recipe</a>
+                  <h4 class="card-title"><%= @food[1].name %></h4>
+                  <p class="card-text"><%= @food[1].description %></p>
+                    <a class="nav-link" href="/food/meat-recipes">Recipe</a>
                 </div>
               </div>
             </div>
+
+            <div class="col-md-3" style="float:left">
+              <div class="card mb-2" style="border: 5px solid #5c3971;">
+                <img class="card-img-top" src=<%= @food[2].image_name(@food[2].name) %> alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title"><%= @food[2].name %></h4>
+                  <p class="card-text"><%= @food[2].description %></p>
+                  <a class="nav-link" href="/food/meat-recipes">Recipe</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3" style="float:left">
+              <div class="card mb-2" style="border: 5px solid #5c3971;">
+                <img class="card-img-top" src=<%= @food[3].image_name(@food[3].name) %> alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title"><%= @food[3].name %></h4>
+                  <p class="card-text"><%= @food[3].description %></p>
+                  <a class="nav-link" href="/food/meat-recipes">Recipe</a>
+                </div>
+              </div>
+            </div>
+
           </div>
           <!--/.First slide-->
 
           <!--Second slide-->
           <div class="carousel-item">
 
-            <div class="col-md-4" style="float:left">
+            <div class="col-md-3" style="float:left">
               <div class="card mb-2" style="border: 5px solid #5c3971;">
-                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+                <img class="card-img-top" src=<%= @food[4].image_name(@food[4].name) %>  alt="Card image cap">
                 <div class="card-body">
-                <h4 class="card-title"><%=item.name%></h4>
-                <p class="card-text"> <%=item.description%></p>
-                <a class="btn btn-primary">Recipe</a>
+                  <h4 class="card-title"><%= @food[4].name %></h4>
+                  <p class="card-text"><%= @food[4].description %></p>
+                  <a class="nav-link" href="/food/meat-recipes">Recipe</a>
                 </div>
               </div>
             </div>
 
-            <div class="col-md-4" style="float:left">
+            <div class="col-md-3" style="float:left">
               <div class="card mb-2" style="border: 5px solid #5c3971;">
-                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg" alt="Card image cap">
+                <img class="card-img-top" src=<%= @food[5].image_name(@food[5].name) %> alt="Card image cap">
                 <div class="card-body">
-                <h4 class="card-title"><%=item.name%></h4>
-                <p class="card-text"> <%=item.description%></p>
-                <a class="btn btn-primary">Recipe</a>
+                  <h4 class="card-title"><%= @food[5].name %></h4>
+                  <p class="card-text"><%= @food[5].description %></p>
+                  <a class="nav-link" href="/food/meat-recipes">Recipe</a>
                 </div>
               </div>
             </div>
 
-            <div class="col-md-4" style="float:left">
+            <div class="col-md-3" style="float:left">
               <div class="card mb-2" style="border: 5px solid #5c3971;">
-                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg" alt="Card image cap">
+                <img class="card-img-top" src=<%= @food[6].image_name(@food[6].name) %> alt="Card image cap">
                 <div class="card-body">
-                <h4 class="card-title"><%=item.name%></h4>
-                <p class="card-text"> <%=item.description%></p>
-                <a class="btn btn-primary">Recipe</a>
+                  <h4 class="card-title"><%= @food[6].name %></h4>
+                  <p class="card-text"><%= @food[6].description %></p>
+                  <a class="nav-link" href="/food/meat-recipes">Recipe</a>
                 </div>
               </div>
             </div>
-            <% end %>
+
+            <div class="col-md-3" style="float:left">
+              <div class="card mb-2" style="border: 5px solid #5c3971;">
+                <img class="card-img-top" src=<%= @food[7].image_name(@food[7].name) %> alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title"><%= @food[7].name %></h4>
+                  <p class="card-text"><%= @food[7].description %></p>
+                  <a class="nav-link" href="/food/meat-recipes">Recipe</a>
+                </div>
+              </div>
+            </div>
 
           </div>
           <!--/.Second slide-->
 
 
-          
-        </div>
+
+        </div> <br> <br>
         <!--/.Slides-->
 
       </div>
