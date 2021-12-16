@@ -82,7 +82,4 @@ private
   def food_params
     params.require(:food).permit(:name, :dietary_pref, :ingredients, :cooking_time, :allergies, :cooking_instructions)
   end
-
-  def fav_params
-    params.require(:food).permit(:id)
 end
