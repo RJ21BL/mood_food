@@ -16,7 +16,7 @@ class FoodController < ApplicationController
   def show
   end 
 
-
+4
   def vegan
     @vegan = Food.where(dietary_pref: 'Vegan')
     @vegans = @vegan[rand(@vegan.length)]
