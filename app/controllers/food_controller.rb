@@ -85,4 +85,5 @@ private
 
   def fav_params
     params.require(:food).permit(:id)
+  end
 end
