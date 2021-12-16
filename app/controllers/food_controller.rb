@@ -16,7 +16,7 @@ class FoodController < ApplicationController
   def show
   end 
 
-
+4
   def vegan
     @vegan = Food.where(dietary_pref: 'Vegan')
     @vegans = @vegan[rand(@vegan.length)]
@@ -81,5 +81,4 @@ private
   def food_params
     params.require(:food).permit(:name, :dietary_pref, :ingredients, :cooking_time, :allergies, :cooking_instructions)
   end
-
 end
