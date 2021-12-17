@@ -16,6 +16,16 @@ class UsersController < ApplicationController
   def index 
   end 
 
+  def show 
+    if current_user.diet_pref == "Meat "
+      @user_pref = Food.where(dietary_pref: 'Meat')
+    elsif current_user.diet_pref == "Vegan"
+      @user_pref = Food.where(dietary_pref: 'Vegan')
+    else
+      @user_pref = Food.where(dietary_pref: 'Vegeterian')
+    end 
+  end 
+
   private
 
   def user_params
