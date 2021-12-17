@@ -25,12 +25,15 @@
           <p>Gender: <%= current_user.gender.capitalize %> </p>
           <p>Date of birth: <%= current_user.dob %> </p>
           <p>Diet Preference: <%= current_user.diet_pref %> </p>
+          </div>
+          </div>
+          </div>
+          </div>
 
-          
           <center>
-          <div  class="card-deck ">
-          
-          <% @user_pref.each do |dish| %>
+          <h3> Meals That Suit Your Dietary Preference </h3><br>
+            <div  class="card-deck ">
+              <% @user_pref.each do |dish| %>
                 <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 100rem;">
                   <div class="card-body ">
                     <h3> <%= dish.name %> </h3>
@@ -44,14 +47,7 @@
                 <% end %>
               </div>
             </div>
-          
-            </center>
-            
-            </div>
-            </div>
-            
-            </div>
-            </div>
-            <%= render "layouts/social_media" %>
+          </center>
+      <%= render "layouts/social_media" %>
    </body>
 </html>

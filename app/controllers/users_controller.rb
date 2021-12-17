@@ -17,11 +17,11 @@ class UsersController < ApplicationController
   end 
 
   def show 
-    if current_user.diet_pref == "Meat "
+    if current_user.diet_pref == "Meat"
       @user_pref = Food.where(dietary_pref: 'Meat')
     elsif current_user.diet_pref == "Vegan"
       @user_pref = Food.where(dietary_pref: 'Vegan')
-    else
+    else current_user.diet_pref == "Vegeterian"
       @user_pref = Food.where(dietary_pref: 'Vegeterian')
     end 
   end 
