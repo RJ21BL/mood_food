@@ -62,16 +62,15 @@ class FoodController < ApplicationController
 
   def search
     if params[:search_by_recipe] != "" 
-      @recipe_searched = Food.where("name LIKE ?", params[:search_by_recipe])
+      @recipe_searched = Food.includes("name LIKE ?", params[:search_by_recipe])
       @search_option = 1
       if @recipe_searched == []
         @recipe_searched = Food.all
-        @search_option = 0
+         @search_option = 0
       end
     end 
   end 
 
- 
 
   def recipe
     @food = Food.find(params[:id])
