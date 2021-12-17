@@ -26,9 +26,28 @@
           <p>Date of birth: <%= current_user.dob %> </p>
           <p>Diet Preference: <%= current_user.diet_pref %> </p>
           </div>
-        </div>
-          
-      </div>
-    </div>
+          </div>
+          </div>
+          </div>
+
+          <center>
+          <h3> Meals That Suit Your Dietary Preference </h3><br>
+            <div  class="card-deck ">
+              <% @user_pref.each do |dish| %>
+                <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 100rem;">
+                  <div class="card-body ">
+                    <h3> <%= dish.name %> </h3>
+                    <img class="card-img-top" style="width: 60%;" src= <%= dish.image_name(dish.name)%> alt="Card image cap">
+                    <p>Dietary Preferences: <%= dish.dietary_pref %> </p>
+                    <p>Cooking Time: <%= dish.cooking_time %> mins</p>
+                    <p> Description: <%=dish.description %> </p>
+                    <p> <%= link_to 'Get recipe!', food_path(dish.id) %> </p>
+                  </div>
+                </div>
+                <% end %>
+              </div>
+            </div>
+          </center>
+      <%= render "layouts/social_media" %>
    </body>
 </html>

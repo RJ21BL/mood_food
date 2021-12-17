@@ -25,6 +25,7 @@
             <p>Dietary Preferences: <%= recipe.dietary_pref %> </p>
             <p>Cooking Time: <%= recipe.cooking_time %> </p>
             <p> Description: <%=recipe.description %> </p>
+            <p> <%= link_to 'Recipe info!', food_path(recipe.id) %> </p>
           </div>
         </div>
       </div>
